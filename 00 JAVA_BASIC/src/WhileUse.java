@@ -45,6 +45,7 @@ public class WhileUse {
 			l++;
 			
 		}
+		
 		System.out.println();
 		
 		//quiz
@@ -133,6 +134,8 @@ public class WhileUse {
 			}
 			
 		}
+		System.out.println();
+		
 		
 		
 		
