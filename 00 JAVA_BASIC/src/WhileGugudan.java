@@ -15,6 +15,8 @@ public class WhileGugudan {
 				j++;
 			}//while2
 			System.out.println();
+			System.out.println();
+
 
 			i++;
 		}//while1
