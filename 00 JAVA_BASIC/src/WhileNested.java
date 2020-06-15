@@ -172,28 +172,16 @@ public class WhileNested {
 		 ★
 		 */
 		
-		/*
-		★[i=0, j=0]★[i=0, j=1]★[i=0, j=2]★[i=0, j=3]★[i=0, j=4]
-		★[i=1, j=0]★[i=1, j=1]★[i=1, j=2]★[i=1, j=3]
-		★[i=2, j=0]★[i=2, j=1]★[i=2, j=2]
-		★[i=3, j=0]★[i=3, j=1]
-		★[i=4, j=0]
-		 */
-		
-		//i가 0이면 별 5개
-		//i가 1이면 별 4개
-		//i가 2면 별 3개
-		
-		
+
 		i=0;
 		while(i<5) {
 			int j=0;
 			while(j<5) {
-				if(i==0) {
+				if(j+i<5) {
 					System.out.print("★");
-				}else{
+				}else {
 					System.out.print("  ");
-					i++;
+					
 				}
 				j++;
 				
@@ -205,6 +193,7 @@ public class WhileNested {
 		
 		System.out.println();
 		System.out.println();
+		
 		
 
 	}// main
