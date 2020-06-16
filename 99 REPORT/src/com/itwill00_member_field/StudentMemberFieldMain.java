@@ -52,8 +52,7 @@ public class StudentMemberFieldMain {
 		System.out.println();
 		*/
 	  
-	 */
-		
+			
 		
 		
 		
