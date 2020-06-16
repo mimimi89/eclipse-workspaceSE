@@ -3,94 +3,71 @@ package com.itwill00_member_field;
 public class StudentMemberFieldMain {
 
 	public static void main(String[] args) {
-	
-	/*
-	 
-	 // >>>12시에 1234번 차량 입차 <<<
-			
-		//1. 차 객체를 저장할 변수 선언__참조형, 객체형, 클래스형
-		//(Car 사용자 정의 타입, Car.class를 만들어 놓지 않았으면 에러 발생)
-		Car car1=null;
+		Student student1, student2=null;
 		
-		//2. 차 객체를 생성 후 반환되는 주소값이 car1 변수에 대입
-		car1 = new Car(); 
-		
-		//3. 차 객체의 이름이 no라는 멤버 변수에 차량번호 "1234"를 대입
-		//주소(car1).(도트 연산자)멤버(no)
-		car1.no="1234";
-		//4. 차 객체의 이름이 intime이라는 멤버 변수에 입차시간 12를 대입
-		car1.inTime=12;
-		
-		//>>>2시간 후인 14시에 1234번 차량 출차<<<
-		car1.outTime=14;
-		//car1객체의 주차요금 계산 후 car1.fee에 대입
-		car1.fee = (car1.outTime - car1.inTime) * 1000;
-		//car1객체의 영수증 출력
-		
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
-		System.out.printf("  %4s\t %4s\t %4s\t %4s\t", "차량번호", "입차시간", "출차시간", "주차요금");
-		System.out.println();
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
-		System.out.printf("%8s\t %4d시\t %12d시\t %13d원\t", car1.no, car1.inTime, car1.outTime, car1.fee);
-		System.out.println();
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
-		System.out.printf("\t\t>>>>>주차요금 영수증<<<<<\n\n 차량번호: %s\n 입차시간: %d시\n 출차시간: %d시\n 주차요금: %d원\n", car1.no, car1.inTime, car1.outTime, car1.fee);
-		System.out.println();
-		System.out.println();
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		
-		// >>>입차 5678번 차량 13시<<<
-		/*
-		Car car2=new Car();
-		
-		car2.no="5678";
-		car2.inTime=13;
-		
-		System.out.println();
-		*/
-	  
-		/*
-		 학생객체생성(2명)
-		 */
+		student1=new Student();
+		student2=new Student();
 		
 		
+		student1.num = 1;
+		student1.name = "TOM";
+		student1.kor = 45;
+		student1.eng = 56;
+		student1.math = 78;
+		
+		
+		student2.num = 2;
+		student2.name = "ALEX";
+		student2.kor = 54;
+		student2.eng = 65;
+		student2.math = 87;
+		
+		
+		student1.tot = student1.kor+student1.eng+student1.math;
+		student1.avg = student1.tot/3;
+		student1.grade = ' ';
+		if(student1.avg>90&&student1.avg<=100) {
+			student1.grade='A';
+		}else if(student1.avg>80&&student1.avg<=90) {
+			student1.grade='B';
+		}else if(student1.avg>70&&student1.avg<=80) {
+			student1.grade='C';
+		}else if(student1.avg>60&&student1.avg<=70) {
+			student1.grade='D';
+		}else {
+			student1.grade='F';
+		} 
+		student1.rank = 2;
 		 
-	
-		/*
-		 학생객체데이타(번호,이름,국어,영어,수학)입력(2명)
-		 */
 		
-		/*
-		 학생총점,평균,평점계산후 멤버변수에 대입
-		 */
+		student2.tot = student2.kor+student2.eng+student2.math;
+		student2.avg = student2.tot/3;
+		student2.grade = ' ';
+		if(student2.avg>90&&student2.avg<=100) {
+			student2.grade='A';
+		}else if(student2.avg>80&&student2.avg<=90) {
+			student2.grade='B';
+		}else if(student2.avg>70&&student2.avg<=80) {
+			student2.grade='C';
+		}else if(student2.avg>60&&student2.avg<=70) {
+			student2.grade='D';
+		}else {
+			student2.grade='F';
+		} 
+		student2.rank = 1;
 		
 		
-		
-		
-		/*
-		 * 학생데이타 출력
-		 */
-		
-		/*
 		System.out.println("---------------학생 성적출력------------------");
 		System.out.printf("%s %s %s %s %s %s %s %s %s\n",
 				"학번","이름","국어","영어","수학","총점","평균","평점","석차");
 		System.out.println("----------------------------------------------");
 		System.out.printf("%3d %5s %4d %4d %4d %5d %5.1f %2c %3d\n",
-				1,"TOM", 45, 56,78,334,34.88,'A',0);
+				student1.num, student1.name, student1.kor, student1.eng, student1.math, student1.tot, student1.avg, student1.grade, student1.rank);
 		System.out.printf("%3d %5s %4d %4d %4d %5d %5.1f %2c %3d\n",
-				2,"ALEX", 45, 56,78,334,34.88,'A',0);
-		System.out.println("----------------------------------------------");	
-		  
-		 */
+				student2.num, student2.name, student2.kor, student2.eng, student2.math, student2.tot, student2.avg, student2.grade, student2.rank);
+		System.out.println("----------------------------------------------");
 		
 		
-		
-		
-
-	}
-
-}
+	}//main
+	
+}//class

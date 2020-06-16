@@ -39,14 +39,14 @@ public class ParkingZoneMain {
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
 		
 		// >>>입차 5678번 차량 13시<<<
-		/*
+		
 		Car car2=new Car();
 		
 		car2.no="5678";
 		car2.inTime=13;
 		
 		System.out.println();
-		*/
+		
 
 	}//main
 
