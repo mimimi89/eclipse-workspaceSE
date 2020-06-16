@@ -137,7 +137,7 @@ public class If {
 			System.out.println("------------------점수의 유효성 체크--------------------");
 			
 
-			
+		//if use2
 		//앞에서 사용한 변수 : year, c, id, x, y, a, condition
 
 	}

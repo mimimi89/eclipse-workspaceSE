@@ -4,14 +4,15 @@ public class ParkingZoneMain {
 	public static void main(String[] args) {
 		// >>>12시에 1234번 차량 입차 <<<
 			
-		//1. 차 객체를 저장할 변수 선언
+		//1. 차 객체를 저장할 변수 선언__참조형, 객체형, 클래스형
 		//(Car 사용자 정의 타입, Car.class를 만들어 놓지 않았으면 에러 발생)
 		Car car1=null;
 		
-		//2. 차 객체를 생성 후 car1 변수에 대입
+		//2. 차 객체를 생성 후 반환되는 주소값이 car1 변수에 대입
 		car1 = new Car(); 
 		
 		//3. 차 객체의 이름이 no라는 멤버 변수에 차량번호 "1234"를 대입
+		//주소(car1).(도트 연산자)멤버(no)
 		car1.no="1234";
 		//4. 차 객체의 이름이 intime이라는 멤버 변수에 입차시간 12를 대입
 		car1.inTime=12;
