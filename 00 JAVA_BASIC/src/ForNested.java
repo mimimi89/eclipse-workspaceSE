@@ -14,6 +14,7 @@ public class ForNested {
 		2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81 
 		*/
 		
+		
 		/*
 		★★★★★
 		★★★★★
@@ -21,6 +22,36 @@ public class ForNested {
 		★★★★★
 		★★★★★
 		*/
+		System.out.println();
+		System.out.println();
+		System.out.println("첫번째 방법___________________________");
+		
+		for(int i=0;i<5;i++) {
+			System.out.print("★★★★★");
+			System.out.print("\n");
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("두번째 방법___________________________");
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<5;j++) {
+				System.out.print("★");
+				
+			}
+			System.out.print("\n");
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("______________________________________");
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<5;j++) {
+				System.out.printf("★[i=%d, j=%d]", i, j);
+				
+			}
+			System.out.print("\n");
+		}
 		
 		/*
 		☆★★★★
@@ -30,6 +61,27 @@ public class ForNested {
 		★★★★☆
 		*/
 		
+		System.out.println();
+		System.out.println();
+		System.out.println("______________________________________");
+		
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if(i!=j) {
+					System.out.print("★");
+					
+				}else {
+					System.out.print("☆");
+					
+				}
+			}
+			System.out.println();
+		
+			
+		}
+		
+		
+		
 		/*
 		★
 		★★
@@ -37,6 +89,23 @@ public class ForNested {
 		★★★★
 		★★★★★
 		*/
+		System.out.println();
+		System.out.println();
+		System.out.println("______________________________________");
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if(i>=j) {
+					System.out.print("★");
+					
+				}else {
+					System.out.print("  ");
+					
+				}
+			}
+			System.out.println();
+			
+			
+		}
 		
 		/*
 		★★★★★
@@ -45,6 +114,23 @@ public class ForNested {
 		★★
 		★
 		*/
+		System.out.println();
+		System.out.println();
+		System.out.println("______________________________________");
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if(i+j<5) {
+					System.out.print("★");
+					
+				}else {
+					System.out.print("  ");
+					
+				}
+			}
+			System.out.println();
+			
+			
+		}
 		
 		/*
 		★★★★★
@@ -53,6 +139,24 @@ public class ForNested {
 		      ★★
 		        ★
 		 */
+		System.out.println();
+		System.out.println();
+		System.out.println("______________________________________");
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				if(j>=i) {
+					System.out.print("★");
+					
+				}else {
+					System.out.print("  ");
+					
+				}
+			}
+			System.out.println();
+			
+			
+		}
+		
 
 	}
 
