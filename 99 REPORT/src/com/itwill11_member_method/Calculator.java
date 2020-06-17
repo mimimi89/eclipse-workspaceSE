@@ -5,6 +5,12 @@ public class Calculator {
 	private int a;
 	private int b;
 	
+	/*public int add(int a, int b) {
+		int result=int add;
+		a+b;
+	}
+	
+	
 	/*
 	 * 4개의 멤버메쏘드
 	 add( 두개의 정수를 인수로 받아서 더한결과를 반환)
