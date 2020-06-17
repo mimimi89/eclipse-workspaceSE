@@ -130,15 +130,30 @@ public class If {
 			
 			System.out.println();
 			System.out.println("-------------------3과 4의 공배수-----------------------");
+			int num1=15;
 			
+			if(num1%3==0&&num1%4==0) {
+				System.out.println(num1+"은/는 3과 4의 공배수입니다.");
+				
+			}else {
+				System.out.println(num1+"은/는 3과 4의 공배수가 아닙니다.");
+			}
 			
 			
 			System.out.println();
 			System.out.println("------------------점수의 유효성 체크--------------------");
+			int korscore=90;
 			
+			if(korscore>=0||korscore<=100) {
+				System.out.println("국어 점수 : "+korscore+"점은 유효한 점수입니다.");
+			}else {
+				System.out.println("국어 점수 : "+korscore+"점은 유효하지 않은 점수입니다.");
+			}
 
-		//if use2
-		//앞에서 사용한 변수 : year, c, id, x, y, a, condition
+			System.out.println();
+			System.out.println("------------------학생 성적 관리--------------------");
+
+	
 
 	}
 
