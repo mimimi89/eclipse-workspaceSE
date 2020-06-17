@@ -1,5 +1,5 @@
 
-public class ParkingZoneMain {
+public class CarMemberFieldMain {
 
 	public static void main(String[] args) {
 		// >>>12시에 1234번 차량 입차 <<<
