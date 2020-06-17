@@ -4,15 +4,27 @@ public class CarMemberMethodMain {
 	public static void main(String[] args) {
 		//입차
 		Car car1=new Car();
-		car1.no="1234";
-		car1.inTime=12;
+		car1.ipCha("1234", 12);
+		
+		Car car2=new Car();
+		car2.ipCha("5678", 13);
+		
 		
 		//출차
-		car1.outTime=14;
-		car1.fee=(car1.outTime-car1.inTime)*1000;
+		//	-출차 시간 대입
+		//	-요금 계산
+		car1.setOutTime(14);
+		car1.calculateFee();
+		
+		car2.setOutTime(15);
+		car2.calculateFee();
+		
+		
 		
 		//영수증 출력
 		car1.print();
+		car2.print();
+		
 		
 
 	}

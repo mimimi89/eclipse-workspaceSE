@@ -19,6 +19,25 @@ public class Car {
 	//멤버 메쏘드
 	//인스턴스 메쏘드
 	
+	//입차
+	void ipCha(String no, int inTime) {
+		this.no=no;
+		this.inTime=inTime;
+	}
+	
+	//출차시간 set
+	void setOutTime(int outTime) {
+		this.outTime=outTime;
+	}
+	
+	//요금계산
+	void calculateFee(){
+		this.fee=(this.outTime-this.inTime)*1000;
+				
+	}
+	
+	
+	
 	//영수증 출력
 	void print() {
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
