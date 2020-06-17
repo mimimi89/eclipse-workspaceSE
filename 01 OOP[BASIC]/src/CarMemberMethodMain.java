@@ -13,7 +13,7 @@ public class CarMemberMethodMain {
 		//출차
 		//	-출차 시간 대입
 		//	-요금 계산
-		car1.setOutTime(14);
+		car1.setOutTime(17);
 		car1.calculateFee();
 		
 		car2.setOutTime(15);

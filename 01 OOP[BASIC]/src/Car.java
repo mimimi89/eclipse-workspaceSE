@@ -49,6 +49,8 @@ public class Car {
 		System.out.printf("%8s\t %4d시\t %12d시\t %13d원\t", this.no, this.inTime, this.outTime, this.fee);
 		System.out.println();
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
+		System.out.println();
+		System.out.println();
 	}
 
 	
