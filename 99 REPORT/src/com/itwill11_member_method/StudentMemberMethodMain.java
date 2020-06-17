@@ -1,6 +1,8 @@
 package com.itwill11_member_method;
 
 public class StudentMemberMethodMain {
+	//멤버 변수 안 되고, 멤버 메쏘드로 
+	
 	/*
 	학생객체생성(3명)
 	*/
