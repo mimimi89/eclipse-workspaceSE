@@ -130,7 +130,8 @@ public class Switch {
 		 *   << 평점(A,B,C,D,F)계산시 switch 문을사용하세요 >>
 		 */
 		
-		
+		int avg1=;
+		int avg2=;
 	
 		
 		//사용한 변수 이름:level, message, num, direction,
