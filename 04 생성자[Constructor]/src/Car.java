@@ -14,7 +14,25 @@ public class Car {
 	private int outTime;//출차시간
 	private int fee;//주차요금
 	
+	//생성자
 	
+	public Car(String no, int inTime) {
+		super();
+		this.no = no;
+		this.inTime = inTime;
+	}
+	
+	
+	public Car(String no, int inTime, int outTime, int fee) {
+		super();
+		this.no = no;
+		this.inTime = inTime;
+		this.outTime = outTime;
+		this.fee = fee;
+	}
+
+
+
 	//<<<<<행위>>>>>>
 	//멤버 메쏘드
 	//인스턴스 메쏘드
@@ -36,21 +54,23 @@ public class Car {
 				
 	}
 	
+	public void headerPrint() {
+		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
+		System.out.printf("  %4s\t %4s\t %4s\t %4s\t", "차량번호", "입차시간", "출차시간", "주차요금");
+		System.out.println();
+		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
+		
+	}
+	
 	
 	
 	//영수증 출력
 	public void print() {
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
-		System.out.printf("  %4s\t %4s\t %4s\t %4s\t", "차량번호", "입차시간", "출차시간", "주차요금");
-		System.out.println();
-		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
+		
 		System.out.printf("%8s\t %4d시\t %12d시\t %13d원\t", this.no, this.inTime, this.outTime, this.fee);
 		System.out.println();
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
-		System.out.println();
-		System.out.println();
+
 	}
 
 	public String getNo() {
