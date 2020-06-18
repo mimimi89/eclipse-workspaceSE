@@ -53,6 +53,34 @@ public class Car {
 		System.out.println();
 	}
 
+	public String getNo() {
+		return no;
+	}
+
+	public int getInTime() {
+		return inTime;
+	}
+
+	public int getOutTime() {
+		return outTime;
+	}
+
+	public int getFee() {
+		return fee;
+	}
+
+	public void setNo(String no) {
+		this.no = no;
+	}
+
+	public void setInTime(int inTime) {
+		this.inTime = inTime;
+	}
+
+	public void setFee(int fee) {
+		this.fee = fee;
+	}
+
 	
 	
 }//class

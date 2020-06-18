@@ -16,19 +16,16 @@ public class Account {
 		this.owner=owner;
 		this.balance=balance;
 		this.iyul=iyul;
-		
 	}
 	
 	//입금
 	public void deposit(int m) {
 		this.balance=this.balance+m;
-		
 	}
 	
 	//출금
 	public void withdraw(int m) {
 		this.balance=this.balance-m;
-		
 	}
 	
 	//계좌 정보 출력
@@ -38,11 +35,43 @@ public class Account {
 		System.out.println("-------------------------------------------");
 		System.out.printf("%10d %8s %9d원 %5.1f %n", this.no, this.owner, this.balance, this.iyul);
 		System.out.println();
-		
-		
 	}
 
-	
+	//getter, setter 메쏘드
+	public int getNo() {
+		return no;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public double getIyul() {
+		return iyul;
+	}
+
+	public void setNo(int no) {
+		this.no = no;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public void setIyul(double iyul) {
+		this.iyul = iyul;
+	}
+
+
+
 	
 	
 	
