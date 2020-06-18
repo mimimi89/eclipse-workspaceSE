@@ -1,5 +1,5 @@
 
-public class AccountEncapsultionMain {
+public class AccountEncapsulationMain {
 
 	public static void main(String[] args) {
 		
