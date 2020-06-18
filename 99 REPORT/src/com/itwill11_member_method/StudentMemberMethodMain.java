@@ -23,17 +23,17 @@ public class StudentMemberMethodMain {
 	//식별자.scoreTotal(int kor, int eng, int math);
 	//식별자.scoreAverage(int tot);
 	//식별자.scoreGrade(int avg);
-	 stu1.scoreTotal(45,56,78);
-	 stu1.scoreAverage(179);
-	 stu1.scoreGrade(59);
+	 stu1.scoreTotal();
+	 stu1.scoreAverage();
+	 stu1.scoreGrade();
 	 
-	 stu2.scoreTotal(54, 65, 87);
-	 stu2.scoreAverage(206);
-	 stu2.scoreGrade(68);
+	 stu2.scoreTotal();
+	 stu2.scoreAverage();
+	 stu2.scoreGrade();
 	 
-	 stu3.scoreTotal(48, 57, 66);
-	 stu3.scoreAverage(171);
-	 stu3.scoreGrade(57);
+	 stu3.scoreTotal();
+	 stu3.scoreAverage();
+	 stu3.scoreGrade();
 
 	 
 	//학생데이타 출력메쏘드 호출(3명)

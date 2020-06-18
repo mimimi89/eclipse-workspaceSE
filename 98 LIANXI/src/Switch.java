@@ -129,13 +129,30 @@ public class Switch {
 		 *   총점 평균 평점계산후 대입
 		 *   << 평점(A,B,C,D,F)계산시 switch 문을사용하세요 >>
 		 */
+		System.out.println("--------------------------------------------");
+		int avg1= 59;
+		char grade1=' ';
 		
-		double avg1= 59;
-		double avg2= 68;
+		switch((int)avg1/10) {
+		case 10:
+		case 9:
+			grade1='A';
+			break;
+		case 8:
+			grade1='B';
+			break;
+		case 7:
+			grade1='C';
+			break;
+		case 6:
+			grade1='D';
+			break;
+		default:
+			grade1='F';
 		
-		switch(avg1/10) {
-		case
 		}
+		
+		System.out.println(grade1);
 	
 		
 		//사용한 변수 이름:level, message, num, direction,

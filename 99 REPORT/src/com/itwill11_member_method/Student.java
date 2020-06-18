@@ -33,44 +33,41 @@ public class Student {
 		}
 		
 		//총점 계산 메쏘드
-		public void scoreTotal(int kor, int eng, int math) {
-			this.tot=kor+eng+math;
-			System.out.println(this.tot);
+		public void scoreTotal() {
+			this.tot=this.kor+this.eng+this.math;
 		}
 		
 		//평균 계산 메쏘드
-		public void scoreAverage(int tot) {
-			this.avg=tot/3;
-			System.out.println(this.avg);
-			
+		public void scoreAverage() {
+			this.avg=this.tot/3;
 		}
 		
 		//평점 계산 메쏘드
-		public void scoreGrade(int avg) {
-			this.grade=' ';
-			if(avg>90&&avg<=100) {
-				grade='A';
-			}else if(avg>80&&avg<=90) {
-				grade='B';
-			}else if(avg>70&&avg<=80) {
-				grade='C';
-			}else if(avg>60&&avg<=70) {
-				grade='D';
+		public void scoreGrade() {
+			
+			if(this.avg>90&&this.avg<=100) {
+				this.grade='A';
+			}else if(this.avg>80&&this.avg<=90) {
+				this.grade='B';
+			}else if(this.avg>70&&this.avg<=80) {
+				this.grade='C';
+			}else if(this.avg>60&&this.avg<=70) {
+				this.grade='D';
 			}else {
-				grade='F';
+				this.grade='F';
 			}
-			System.out.println(this.grade);
+			
 		}
 		
 		//출력 메쏘드
 		public void print() {
 			System.out.println();
 			System.out.println("---------------학생 성적출력------------------");
-			System.out.printf("%s %s %s %s %s %s %s %s %s\n",
-					"학번","이름","국어","영어","수학","총점","평균","평점","석차");
+			System.out.printf("%4s %2s %2s %2s %2s %2s %3s %4s \n",
+					"학번","이름","국어","영어","수학","총점","평균","평점");
 			System.out.println("----------------------------------------------");
-			System.out.printf("%3d %5s %4d %4d %4d %5d %5.1f %2c %3d\n",
-					this.num, this.name, this.kor, this.eng, this.math, this.tot, this.avg, this.grade, this.rank);
+			System.out.printf("%5d %5s %3d %4d %4d %5d %5.1f %4c \n",
+					this.num, this.name, this.kor, this.eng, this.math, this.tot, this.avg, this.grade);
 			System.out.println("----------------------------------------------");
 			
 		}
