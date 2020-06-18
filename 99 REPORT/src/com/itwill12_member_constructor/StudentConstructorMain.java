@@ -22,12 +22,12 @@ public class StudentConstructorMain {
 		stu3.calculateGrade();
 		
 		stu1.headerPrint();
+		
+		stu1.setName("NICK");
+		
 		stu1.print();
 		stu2.print();
 		stu3.print();
-		
-		
-		
 		
 
 	}
