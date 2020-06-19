@@ -115,11 +115,25 @@ public class While {
 			
 			
 		}
+		System.out.println("1-100 사이의 정수합 출력=>"+tot);
 		
 		System.out.println("----------------1-100 사이의 홀수합 출력-------------------");
 		
+		int o=1;
 		
-		System.out.println("----------------1-100 사이의 짝수합 출력-------------------");
+		while(o<=100) {
+			if(o%2!=0) {
+				oddtot +=o;
+			
+			}else {
+				eventot +=o;
+			}
+			
+			o++;
+			
+		}
+		System.out.println("1-100 사이의 홀수합 출력=>"+oddtot);
+		System.out.println("1-100 사이의 짝수합 출력=>"+eventot);
 		
 		
 		
@@ -129,7 +143,7 @@ public class While {
 		
 	
 	
-	//사용한 변수: i, j, k, n, m, b, z, y, condition,
+	//사용한 변수: i, j, k, n, m, b, z, y, a, condition, tot, oddtot, eventot, 
 		
 		
 		
