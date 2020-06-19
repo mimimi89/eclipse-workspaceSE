@@ -137,11 +137,6 @@ public class While {
 		
 		
 		
-		
-		
-		
-		
-	
 	
 	//사용한 변수: i, j, k, n, m, b, z, y, a, condition, tot, oddtot, eventot, 
 		
