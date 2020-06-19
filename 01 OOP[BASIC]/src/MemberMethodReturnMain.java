@@ -6,9 +6,10 @@ public class MemberMethodReturnMain {
 
 		MemberMethodReturn mmr=new MemberMethodReturn();
 		
-		System.out.println("main1");
-		int recvData1 = mmr.method1();
-		System.out.println("recvData1:"+recvData1);
+		System.out.println("main1");				//임의로
+		int recvData1 = mmr.method1();				//반환해야할 데이터는 첫번째 메쏘드 변수선언 및 대입
+		System.out.println("recvData1:"+recvData1); //첫번째 메쏘드의 반환 값 출력
+													//첫번째 메쏘드 실행과 결과값 11
 		System.out.println();
 		
 		System.out.println("main2");
