@@ -113,9 +113,12 @@ public class While {
 		while(a<=100) {
 			tot=tot+a;
 			
+			a++;
 			
 		}
 		System.out.println("1-100 사이의 정수합 출력=>"+tot);
+		
+	
 		
 		System.out.println("----------------1-100 사이의 홀수합 출력-------------------");
 		
@@ -134,11 +137,60 @@ public class While {
 		}
 		System.out.println("1-100 사이의 홀수합 출력=>"+oddtot);
 		System.out.println("1-100 사이의 짝수합 출력=>"+eventot);
+	
+		System.out.println("----------------A~Z 문자 출력-------------------");
 		
+		char zi='A';
+		int count1=0;
+				
+		while(zi<='Z') {
+			System.out.print(zi+" ");
+			zi++;
+			count1++;
+			if(count1%5==0) {
+				System.out.print("\n");
+			}
+			
+		}
+		System.out.println();
+		
+		System.out.println("----------------숫자형 문자 출력-------------------");
+		
+		char shuzi='0';
+		count1=0;
+		
+		while(shuzi<='9') {
+			System.out.print(shuzi+" ");
+			shuzi++;
+			count1++;
+			if(count1%3==0) {
+				System.out.print("\n");
+			}
+			
+		}
+		System.out.println();
+		
+		System.out.println("----------------한글 출력-------------------");
+		
+		char hanwen='가';
+		count1=0;
+		
+		while(hanwen<='힣') {
+			System.out.print(hanwen+" ");
+			hanwen++;
+			count1++;
+			if(count1%30==0) {
+				System.out.println();
+			}
+			
+		}
+		System.out.println();
+		
+		System.out.println("---------------------------------------------");
 		
 		
 	
-	//사용한 변수: i, j, k, n, m, b, z, y, a, condition, tot, oddtot, eventot, 
+	//사용한 변수: i, j, k, n, m, b, z, y, a, o, condition, tot, oddtot, eventot, 
 		
 		
 		

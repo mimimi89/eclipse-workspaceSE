@@ -5,6 +5,7 @@ public class LocalVariableInitializationMain {
 		
 		int a = 9;
 		int b = 10;
+		//로컬에는 접근성 제한 안 된다
 		
 		int t = a;
 		a = b;
