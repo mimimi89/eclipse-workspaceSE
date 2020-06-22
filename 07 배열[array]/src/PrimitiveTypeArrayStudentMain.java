@@ -117,56 +117,7 @@ public class PrimitiveTypeArrayStudentMain {
 		
 		System.out.println("----------총점순 오름차순 정렬------------- ???? 이거 뭐지ㅜㅠㅠㅠ");
 		
-		//1회
-		for (int j = 0; j < totA.length-1; j++) {
-			if(totA[j]>totA[j+1]) {
-				//총점교환
-				int temTot=totA[j];
-				totA[j]=totA[j+1];
-				totA[j+1]=temTot;
-				//다른 데이타(학번, 이름, 국어, 영어, 수학, 평균, 평점, 석차까지)도 교체해 줘야 함
-				int temNo=noArray[j];
-				noArray[j]=noArray[j+1];
-				noArray[j+1]=temTot;
-				
-				
-				String temName=nameArray[j];
-				nameArray[j]=nameArray[j+1];
-				nameArray[j+1]=temName;
-				
-				
-				int temKorA=korA[j];
-				korA[j]=korA[j+1];
-				korA[j+1]=temKorA;
-				
-				
-				int temEngA=engA[j];
-				engA[j]=engA[j+1];
-				engA[j+1]=temEngA;
-				
-				int temMathA=mathA[j];
-				mathA[j]=mathA[j+1];
-				mathA[j+1]=temMathA;
-				
-				double temAvrA=avrA[j];
-				avrA[j]=avrA[j+1];
-				avrA[j+1]=temAvrA;
-				
-				
-				char temGradeA=gradeA[j];
-				gradeA[j]=gradeA[j+1];
-				gradeA[j+1]=temGradeA;
-				
-				
-				int temRankA=rankA[j];
-				rankA[j]=rankA[j+1];
-				rankA[j+1]=temRankA;
-				
-				
-				
-				
-			}
-		}
+		
 		
 	
 		
