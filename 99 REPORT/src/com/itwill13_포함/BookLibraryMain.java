@@ -8,7 +8,7 @@ public class BookLibraryMain {
 		
 		
 				//회원 객체 생성
-				BookMember m1=new BookMember(520, "김미영", 01037050000);
+				BookMember m1=new BookMember(520, "김미영", 142364672);
 	
 				//책 객체 생성
 				Book b1=new Book();

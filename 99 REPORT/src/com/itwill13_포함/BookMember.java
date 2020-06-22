@@ -37,7 +37,7 @@ public class BookMember {
 		
 		//출력메쏘드
 		public void print() {
-			System.out.println(this.memNo+"--"+this.memName+"--"+this.phoneNumber+"--"+this.bookTitle);
+			System.out.println(this.memNo+"--"+this.memName+"--"+this.phoneNumber);
 			this.book.print();
 		}
 

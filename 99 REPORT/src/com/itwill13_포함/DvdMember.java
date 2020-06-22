@@ -32,7 +32,7 @@ public class DvdMember {
 	
 	
 	public void print() {
-		System.out.println(this.memNo+"--"+this.memName+"--"+this.phoneNumber+"--"+this.dvdTitle);
+		System.out.println(this.memNo+"--"+this.memName+"--"+this.phoneNumber);
 		this.dvd.print();
 	}
 

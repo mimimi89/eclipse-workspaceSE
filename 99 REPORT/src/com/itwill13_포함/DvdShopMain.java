@@ -4,7 +4,7 @@ public class DvdShopMain {
 
 	public static void main(String[] args) {
 		
-		DvdMember m1=new DvdMember(520, "김미영", 01037050000);
+		DvdMember m1=new DvdMember(520, "김미영", 142364672);
 
 		Dvd d1=new Dvd();
 		
