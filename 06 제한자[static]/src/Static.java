@@ -35,7 +35,7 @@ public class Static {
 	public static int static_member_field=200;
 	
 	public void instance_method() {
-		System.out.println("난 인스턴스(객체) 메쏘드(this 사용가능)"+this.instance_member_field);
+		System.out.println("난 인스턴스(객체) 메쏘드(this 사용가능): "+this+": "+this.instance_member_field);
 	}
 	
 	public static void static_method() {

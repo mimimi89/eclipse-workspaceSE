@@ -21,7 +21,7 @@ public class PrimitiveTypeArrayMain {
 		//pi에는 정수값이 들어가고
 		
 		int[] ia=new int[5];
-		
+		//int 타입의 배열 객체
 		ia[0]=11;
 		ia[1]=22;
 		ia[2]=33;

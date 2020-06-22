@@ -48,7 +48,6 @@ public class PrimitiveTypeArrayStudentMain {
 		
 		
 		
-		
 		System.out.println();
 		
 		System.out.println("----------------3번 학생의 정보 출력-------------------");

@@ -14,11 +14,11 @@ public class StaticMain {
 			System.out.println("2.Static.static_member_field-->"+Static.static_member_field);
 			Static.static_method();
 			
-			Static.st1 = new Static();
+			Static st1 = new Static();
 			st1.instance_member_field=1;
 			st1.instance_method();
 			
-			Static.st2 = new Static();
+			Static st2 = new Static();
 			st2.instance_member_field=2;
 			st2.instance_method();
 			
