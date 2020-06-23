@@ -15,7 +15,7 @@ public class AcademyStudent extends AcademyMember {
 	
 	public void studentPrint() {
 		this.print();
-		System.out.print(ban);
+		System.out.println(ban);
 	}
 
 	public String getBan() {

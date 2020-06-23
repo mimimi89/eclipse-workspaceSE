@@ -19,8 +19,28 @@ public class AcademyMemberArrayMain {
 		Staffs[0]=new AcademyStaff(5, "lim", "총무부");
 		Staffs[1]=new AcademyStaff(6, "him", "홍보부");
 		
-		System.out.println("----------AcademyMember-------------");
+		
+		System.out.println("----------AcademyMember 전체출력-------------");
+		System.out.println();
+		
+		System.out.println("-------------student-------------");
+		for (int i = 0; i < students.length; i++) {
+			students[i].studentPrint();
+		}
 
+		System.out.println();
+		
+		System.out.println("-------------gangsa-------------");
+		for (int i = 0; i < Gangsas.length; i++) {
+			Gangsas[i].gansaPrint();
+		}
+		System.out.println();
+		
+		System.out.println("-------------staff-------------");
+		for (int i = 0; i < Staffs.length; i++) {
+			Staffs[i].staffPrint();
+			
+		}
 		
 
 	}
