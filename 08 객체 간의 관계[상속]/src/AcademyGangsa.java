@@ -15,7 +15,7 @@ public class AcademyGangsa extends AcademyMember {
 	
 	public void gansaPrint() {
 		this.print();
-		System.out.println(subject);
+		System.out.print(subject);
 	}
 	
 	public String getSubject() {

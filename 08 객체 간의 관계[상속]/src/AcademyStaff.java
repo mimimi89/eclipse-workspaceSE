@@ -16,7 +16,8 @@ public class AcademyStaff extends AcademyMember {
 	
 	public void staffPrint() {
 		this.print();
-		System.out.println(depart);
+		System.out.print(depart);
+		
 	}
 	
 	public String getDepart() {
