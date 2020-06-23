@@ -1,9 +1,8 @@
 package com.itwill14_배열;
 
 public class Student {
-
-	// << 멤버변수선언 >>
 	
+	//멤버필드
 	private int no;
 	private String name;
 	private int kor;
@@ -15,11 +14,12 @@ public class Student {
 	private int rank=1;
 	
 
-	// <<생성자메쏘드(오버로딩)>>
+	//기본 생성자
 	public Student() {
 
 	}
 	
+	//생성자(학생 기본 데이타)
 	public Student(int no, String name, int kor, int eng, int math) {
 		this.no = no;
 		this.name = name;
@@ -29,8 +29,7 @@ public class Student {
 		
 	}
 
-
-	 // <<멤버메쏘드>>
+	//멤버메쏘드
 	public void setStudentData(int no, String name, int kor, int eng, int math) {		//학생 데이타 세팅
 		this.no = no;
 		this.name = name;
@@ -38,16 +37,16 @@ public class Student {
 		this.eng = eng;
 		this.math = math;
 	}
-
+	//총점 계산
 	public void calculateTotal() {														//총점 계산
 		this.tot = this.kor + this.eng + this.math;
 	}
-
+	//평균 계산
 	public void calculateAvg() {														//평균 계산
 
 		this.avg = (((int) ((this.tot / 3.0) * 100.0)) / 100.0);
 	}
-
+	//평점 계산
 	public char calculateGrade() {														//평점 계산
 
 		if (this.avg >= 90)
@@ -63,20 +62,20 @@ public class Student {
 
 		return grade;
 	}
-
+	//헤더프린트
 	public static void headerPrint() {													//헤더프린트
 		System.out.println("--------------------------학생 성적출력-----------------------------");
 		System.out.println("학번\t이름\t국어\t영어\t수학\t총점\t평균\t평점\t석차");
 		System.out.println("--------------------------------------------------------------------");
 	}
-
+	//성적출력
 	public void print() {
 
 		System.out.println(no + "\t" + name + "\t" + kor + "\t" + eng + "\t" + math + "\t" + tot + "\t" + avg + "\t"
 				+ grade + "\t" + rank);
 	}
 	
-	 //<< getter, setter>>
+	 //getter, setter
 
 	public int getNo() {
 		return no;

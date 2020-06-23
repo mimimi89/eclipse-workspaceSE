@@ -13,14 +13,16 @@ public class StudentArrayMain {
 					new Student(7,"ZIM",99,93,95),
 					new Student(8,"LIM",83,80,99),
 					new Student(9,"QIM",73,90,80)
-					
-			};
+			}; 
+			//student타입, 9개의 주소값을 가지고 있는 배열 객체 생성
+			//배열 객체의 이름: students
 			
-			/*
-			 * 1. 전체학생총점,평균,평점계산
-			 */
+			//07 배열-PrimitiveTypeArrayStudentMain 참고하기 
+		
 			System.out.println("1. 전체학생총점,평균,평점계산");
-			
+			for (int i = 0; i < students.length; i++) {
+				
+			}
 			
 			/*
 			 * 2. 전체학생 총점으로 석차계산
