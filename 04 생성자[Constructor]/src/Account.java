@@ -10,6 +10,20 @@ public class Account {
 	
 	//생성자
 	//alt+shift+s-->o, source에서 constructor using fields
+	
+	/**
+	 * 빈 계좌 객체 생성
+	 */
+	public Account() {
+		
+	}
+	
+	/**인자로 초기화 된 계좌 객체 생성
+	 * @param no
+	 * @param owner
+	 * @param balance
+	 * @param iyul
+	 */
 	public Account(int no, String owner, int balance, double iyul) {
 		this.no=no;
 		this.owner=owner;
@@ -18,6 +32,8 @@ public class Account {
 	}
 	
 	
+
+
 	//멤버 메쏘드, 인스턴스 메쏘드
 	
 	//계좌 데이타를 set
