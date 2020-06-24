@@ -10,8 +10,8 @@ public class AcademyMemberArrayOverridingMain {
 		
 		
 		students[0]=new AcademyStudent(1, "kim", "android");
-		students[1]=new AcademyStudent(1, "jim", "ios");
-		students[2]=new AcademyStudent(1, "dim", "linux");
+		students[1]=new AcademyStudent(2, "jim", "ios");
+		students[2]=new AcademyStudent(3, "dim", "linux");
 		
 		Gangsas[0]=new AcademyGangsa(4,"김강사", "아두이노");
 		Gangsas[1]=new AcademyGangsa(5,"정강사", "오피스");
