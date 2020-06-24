@@ -1,5 +1,5 @@
 
-public class Parent {
+public class Parent extends Object{
 	
 	public int member1;
 	public int member2;
