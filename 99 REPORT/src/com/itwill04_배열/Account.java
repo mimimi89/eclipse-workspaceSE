@@ -1,4 +1,4 @@
-package com.itwill14_배열;
+package com.itwill04_배열;
 
 public class Account {
 	//속성

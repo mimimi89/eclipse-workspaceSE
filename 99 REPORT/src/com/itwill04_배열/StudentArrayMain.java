@@ -1,4 +1,4 @@
-package com.itwill14_배열;
+package com.itwill04_배열;
 
 public class StudentArrayMain {
 		
@@ -17,42 +17,66 @@ public class StudentArrayMain {
 			//student타입, 9개의 주소값을 가지고 있는 배열 객체 생성
 			//배열 객체의 이름: students
 			
-			//07 배열-PrimitiveTypeArrayStudentMain 참고하기 
-		
+			
 			System.out.println("1. 전체학생총점,평균,평점계산");
 			for (int i = 0; i < students.length; i++) {
+				students[i].calculateTotal();
+				students[i].calculateAvg();
+				students[i].calculateGrade();
 				
 			}
+			System.out.println();
 			
-			/*
-			 * 2. 전체학생 총점으로 석차계산
-			 */
+			
 			System.out.println("2. 전체학생 총점으로 석차계산");
-			/*
-			 * 3. 전체학생출력
-			 */
+			// 		??????
+			System.out.println();
+			
+			
 			System.out.println("3. 전체학생출력 ");
-			/*
-			 * 4. 번호3번 학생한명 출력  
-			 */
-			System.out.println("4.번호3번 학생한명 출력  ");
-			
-			/*
-			 * 5. 학점A인 학생들 출력
-			 */
-			
-			System.out.println("5. 학점A인 학생들 출력");
-			
-			/*
-			 * 6. 학생총점으로 오름차순정렬
-			 */
-			System.out.println("6. 학생총점으로 오름차순정렬");
-			
-			
 			Student.headerPrint();
 			for (int i = 0; i < students.length; i++) {
 				students[i].print();
+				
 			}
+			System.out.println();
+			
+			
+			System.out.println("4.번호3번 학생한명 출력  ");
+			Student.headerPrint();
+			for (int i = 0; i < students.length; i++) {
+				if(students[i].getNo()==3) {
+					students[i].print();
+				}
+			}
+			System.out.println();
+			
+			
+			System.out.println("5. 학점A인 학생들 출력");
+			for (int i = 0; i < students.length; i++) {
+				if(students[i].getGrade()=='A') {
+					students[i].print();
+				}
+			}
+			System.out.println();
+			
+			
+			
+			//////
+			System.out.println("6. 학생총점으로 오름차순정렬");
+			Student.headerPrint();
+			for (int i = 0; i < students.length; i++) {
+				for (int j = 0; j < students.length-1; j++) {
+					if(students[i].getTot()>students[j].getTot()) {
+						
+					}
+				}
+				students[i].print();
+			}
+			
+			
+			
+			
 			/*
 			  7. 학생학점순으로 오름차순정렬
 			 */

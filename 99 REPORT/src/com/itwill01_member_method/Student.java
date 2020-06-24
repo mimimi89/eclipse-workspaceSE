@@ -1,4 +1,4 @@
-package com.itwill11_member_method;
+package com.itwill01_member_method;
 
 public class Student {
 	/*

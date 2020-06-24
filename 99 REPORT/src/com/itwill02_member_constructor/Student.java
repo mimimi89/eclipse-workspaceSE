@@ -1,4 +1,4 @@
-package com.itwill12_member_constructor;
+package com.itwill02_member_constructor;
 
 public class Student {
 	

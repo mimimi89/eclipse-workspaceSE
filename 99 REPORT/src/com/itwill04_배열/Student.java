@@ -1,4 +1,4 @@
-package com.itwill14_배열;
+package com.itwill04_배열;
 
 public class Student {
 	
@@ -11,7 +11,7 @@ public class Student {
 	private int tot;
 	private double avg;
 	private char grade;
-	private int rank=1;
+	private int rank;
 	
 
 	//기본 생성자
