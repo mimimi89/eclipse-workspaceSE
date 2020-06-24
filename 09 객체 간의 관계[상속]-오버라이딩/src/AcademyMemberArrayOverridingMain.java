@@ -1,5 +1,5 @@
 
-public class AcademyMemberArrayMain {
+public class AcademyMemberArrayOverridingMain {
 
 	public static void main(String[] args) {
 		
@@ -25,20 +25,20 @@ public class AcademyMemberArrayMain {
 		
 		System.out.println("-------------student-------------");
 		for (int i = 0; i < students.length; i++) {
-			students[i].studentPrint();
+			students[i].print();
 		}
 
 		System.out.println();
 		
 		System.out.println("-------------gangsa-------------");
 		for (int i = 0; i < Gangsas.length; i++) {
-			Gangsas[i].gansaPrint();
+			Gangsas[i].print();
 		}
 		System.out.println();
 		
 		System.out.println("-------------staff-------------");
 		for (int i = 0; i < Staffs.length; i++) {
-			Staffs[i].staffPrint();
+			Staffs[i].print();
 			
 		}
 		

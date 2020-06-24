@@ -1,5 +1,5 @@
 
-public class AcademyMemberMain {
+public class AcademyMemberOverridingMain {
 
 	public static void main(String[] args) {
 		
@@ -7,9 +7,9 @@ public class AcademyMemberMain {
 		AcademyGangsa gs1=new AcademyGangsa(2, "lee", "office");
 		AcademyStaff sf1=new AcademyStaff(3, "hong", "marketing");
 		
-		st1.studentPrint();
-		gs1.gansaPrint();
-		sf1.staffPrint();
+		st1.print();
+		gs1.print();
+		sf1.print();
 		sf1.print();
 		
 		

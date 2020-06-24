@@ -13,8 +13,8 @@ public class AcademyGangsa extends AcademyMember {
 	}
 
 	
-	public void gansaPrint() {
-		this.print();
+	public void print() {
+		super.print();
 		System.out.println(subject);
 	}
 	

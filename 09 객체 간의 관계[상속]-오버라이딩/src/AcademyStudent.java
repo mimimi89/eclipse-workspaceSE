@@ -13,8 +13,8 @@ public class AcademyStudent extends AcademyMember {
 		this.ban = ban;
 	}
 	
-	public void studentPrint() {
-		this.print();
+	public void print() {
+		super.print();
 		System.out.println(ban);
 	}
 
