@@ -1,0 +1,21 @@
+package lang;
+
+public class ObjectChild {
+	@Override
+	public String toString() {
+		
+		return "난 ObjectChild입니다.";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		return super.equals(obj);
+	}
+	
+	
+	
+	
+	
+
+}

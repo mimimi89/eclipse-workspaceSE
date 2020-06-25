@@ -126,11 +126,31 @@ public class ReferenceTypeArrayAccountMain {
 				
 			}
 		}
-		
 		Account.headerPrint();
 		for (int i = 0; i < accounts.length; i++) {
 			accounts[i].print();
 		}
+		
+		
+		System.out.println("10-1.계좌주 이름 오름차순으로 정렬");
+		for (int i = 0; i < accounts.length-1; i++) {
+			for (int j = 0; j < accounts.length-1-j; j++) {
+				if(accounts[j].getOwner().compareTo(accounts[j+1].getOwner())>0) {
+					Account temOwner=accounts[j];
+					accounts[j]=accounts[j+1];
+					accounts[j+1]=temOwner;
+					
+				}else if(accounts[j].getOwner().compareTo(accounts[j+1].getOwner())==0) {
+					System.out.println(">>>>>>2차 정렬");
+					
+				}
+			}
+		}
+		Account.headerPrint();
+		for (int i = 0; i < accounts.length; i++) {
+			accounts[i].print();
+		}
+		
 		
 		System.out.println();
 		System.out.println("11.5555 계좌의 이율을 3.5로 변경");
