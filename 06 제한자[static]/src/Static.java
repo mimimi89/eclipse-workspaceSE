@@ -1,5 +1,6 @@
-/*
- * static 제한자(제어자,modifier)
+///
+ 
+/* static 제한자(제어자,modifier)
  *   1.멤버변수나,메쏘드 앞에 부칠수있다
  * 	 2.static 제한자가 붙어있는 변수나메쏘드는
  *     객체생성 없이도 사용이가능하다.
@@ -36,7 +37,7 @@ public class Static {
 	
 	public void instance_method() {
 		System.out.println("난 인스턴스(객체) 메쏘드(this 사용가능): "+this+": "+this.instance_member_field);
-	}
+	}														//this 주소값
 	
 	public static void static_method() {
 		System.out.println("난 정적(공용, 클래스) 메쏘드(this 사용불가)");

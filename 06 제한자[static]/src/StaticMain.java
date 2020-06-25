@@ -1,3 +1,4 @@
+/// 
 
 public class StaticMain {
 
@@ -17,6 +18,8 @@ public class StaticMain {
 			Static st1 = new Static();
 			st1.instance_member_field=1;
 			st1.instance_method();
+			
+			
 			
 			Static st2 = new Static();
 			st2.instance_member_field=2;

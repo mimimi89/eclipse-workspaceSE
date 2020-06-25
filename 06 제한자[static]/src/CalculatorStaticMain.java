@@ -1,12 +1,13 @@
+//
 
 public class CalculatorStaticMain {
 	public static void main(String[] args) {
 		
-		/*
-		Calculator calculator=new Calculator();
-		int r=calculator.add(1, 2);
-		System.out.println(r);
 		
+		Calculator calculator=new Calculator();
+		calculator.add(1, 2);
+		System.out.println(calculator.add(1, 2));
+		/*
 		r=calculator.sub(1, 2);
 		System.out.println(r);
 		
@@ -21,7 +22,7 @@ public class CalculatorStaticMain {
 		
 		System.out.println();
 		System.out.println("----------------static way-------------------");
-		System.out.println(Calculator.add(1, 2));
+		System.out.println(Calculator.add(1, 2)); //static 객체 생성 없이 바로 메쏘드 사용 가능
 		System.out.println(Calculator.sub(1, 2));
 		System.out.println(Calculator.div(1, 2));
 		System.out.println(Calculator.mul(1, 2));
