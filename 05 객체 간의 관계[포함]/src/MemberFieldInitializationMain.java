@@ -1,5 +1,7 @@
+///
 
 public class MemberFieldInitializationMain {
+	//initialization 초기화
 
 	public static void main(String[] args) {
 		
