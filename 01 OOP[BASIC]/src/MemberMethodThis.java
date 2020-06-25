@@ -1,8 +1,9 @@
+///
 
 public class MemberMethodThis {
 
-	
-	int memberField1;
+	//멤버변수
+	int memberField1;		
 	char memberField2;
 	double memberField3;
 	
