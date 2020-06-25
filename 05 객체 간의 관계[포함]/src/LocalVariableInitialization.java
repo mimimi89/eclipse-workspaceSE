@@ -1,9 +1,9 @@
-
+///
 public class LocalVariableInitialization {
-	
+	//멤버필드
 	private int no;
 	private String name;
-	
+	//생성자
 	public LocalVariableInitialization() {
 		
 	}
@@ -13,11 +13,11 @@ public class LocalVariableInitialization {
 		this.no = no;
 		this.name = name;
 	}
-	
-	public void print() {
+	//인스턴스메쏘드
+	public void print() {	//출력메쏘드
 		System.out.println(">>"+this.no+"\t"+this.name);
 	}
-
+	//setter, getter 메쏘드
 	public int getNo() {
 		return no;
 	}

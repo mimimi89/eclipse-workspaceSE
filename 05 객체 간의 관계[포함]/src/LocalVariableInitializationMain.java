@@ -1,4 +1,4 @@
-
+///
 public class LocalVariableInitializationMain {
 
 	public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class LocalVariableInitializationMain {
 		
 		LocalVariableInitialization m1=new LocalVariableInitialization(1, "KIM");
 		m1.print();
+		System.out.println(m1);
 		
 		LocalVariableInitialization m2=null;
 		//null: 객체주소 리터럴

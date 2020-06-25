@@ -1,15 +1,13 @@
+/// 
 
 public class Car {
 	
-	//차량번호
-	private int no;
-	//차의 모델
-	private String model;
-	//차의 엔진
-	private Engine engine;
+	//멤버필드
+	private int no;			//차량번호
+	private String model;	//차의 모델
+	private Engine engine;	//엔진 타입의 멤버 변수
 	
-	//생성자 오버로드
-	
+	//생성자 오버로드, 하나의 메쏘드 다양한 인자 종류와 개수
 	public Car() {
 		
 	}
@@ -20,6 +18,7 @@ public class Car {
 		this.engine = engine;
 	}
 	
+	//인스턴스 메쏘드
 	public void print() {
 		System.out.print(this.no+"\t"+this.model+"\t\t");
 		this.engine.print();

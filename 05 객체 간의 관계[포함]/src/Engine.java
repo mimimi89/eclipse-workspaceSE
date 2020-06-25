@@ -1,13 +1,12 @@
-
+/// 
 public class Engine {
 	
-	//엔진 타입
-	private String type;
+	//멤버필드
+	private String type;	//엔진 타입
+	private int cc;			//엔진 배기량
 	
-	//엔진 배기량
-	private int cc;
-
-	public Engine() {
+	//생성자 메쏘드
+	public Engine() {		//기본 생성자
 		
 	}
 	
@@ -16,10 +15,12 @@ public class Engine {
 		this.cc = cc;
 	}
 	
-	public void print(){
+	//인스턴스 메쏘드
+	public void print(){	//출력 메쏘드
 		System.out.println(this.type+"\t"+this.cc);
 	}
-
+	
+	//setter, getter 메쏘드
 	public String getType() {
 		return type;
 	}
