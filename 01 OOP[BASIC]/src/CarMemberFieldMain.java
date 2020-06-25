@@ -1,3 +1,4 @@
+///
 
 public class CarMemberFieldMain {
 
@@ -44,6 +45,8 @@ public class CarMemberFieldMain {
 		
 		car2.no="5678";
 		car2.inTime=13;
+		car2.print();
+		
 		
 		System.out.println();
 		

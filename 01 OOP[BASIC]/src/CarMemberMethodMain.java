@@ -1,3 +1,4 @@
+///
 
 public class CarMemberMethodMain {
 
@@ -13,8 +14,8 @@ public class CarMemberMethodMain {
 		//출차
 		//	-출차 시간 대입
 		//	-요금 계산
-		car1.setOutTime(17);
-		car1.calculateFee();
+		car1.setOutTime(17);	//출차시간을 17시로 변경
+		car1.calculateFee();	//메쏘드를 사용해 주차요금을 계산
 		
 		car2.setOutTime(15);
 		car2.calculateFee();
@@ -22,7 +23,7 @@ public class CarMemberMethodMain {
 		
 		
 		//영수증 출력
-		car1.print();
+		car1.print();	
 		car2.print();
 		
 		
