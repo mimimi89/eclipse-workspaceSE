@@ -5,13 +5,14 @@ package com.itwill06_service;
 public class AccountServiceReturnMain {
 
 	public static void main(String[] args) {
-		AccountServiceReturn accountService = new AccountServiceReturn();
+		AccountServiceReturn accountServiceReturn = new AccountServiceReturn();
 		System.out.println("0.AccountService객체야 은행계좌 추가해줘");
 		Account newAccount1 = new Account(9090, "구공탄",8989, 0.8);
 		Account newAccount2 = new Account(7878, "CHIL",8000, 0.3);
 		//System.out.println("0.AccountService객체야 계좌번호줄께 계좌삭제해줘");
 		
 		System.out.println("1.AccountService객체야 은행계좌 총계좌수를 반환해줘");
+		
 		int accountNo = 0;
 		System.out.println(">>>> 총계좌수:" + accountNo);
 		System.out.println("2.AccountService객체야 은행계좌들 전체출력해줘");
