@@ -185,8 +185,24 @@ public class AccountService {
 	 11.계좌를 잔고순으로 내림차순정렬
 	 */
 	public void sortByBalanceDescending() {
-		
-	}
+			for (int i = 0; i < accounts.length-1; i++) {
+				for (int j = 0; j < accounts.length-1; j++) {
+					if(accounts[j].getBalance()<accounts[j+1].getBalance()) {
+						Account temAccount=accounts[j];
+						accounts[j]=accounts[j+1];
+						accounts[j+1]=temAccount;
+					}
+					
+				}
+				
+			}
+			Account.headerPrint();
+			for (int i = 0; i < accounts.length; i++) {
+				accounts[i].print();
+			}
+			
+		}	
+	
 
 	
 	/*
@@ -200,6 +216,14 @@ public class AccountService {
 	번호,이름,잔고,이율 인자로받아서 계좌객체수정(update)
 	*/
 	public void updateAccount(int no,String owner,int balance,double iyul) {
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==no) {
+				accounts[i].setOwner(owner);
+				accounts[i].setBalance(balance);
+				accounts[i].setIyul(iyul);
+				accounts[i].print();
+			}
+		}
 		
 	}
 	 

@@ -64,10 +64,13 @@ public class AccountServiceMain {
 
 
 		System.out.println("11.AccountService야 계좌를 잔고순으로 내림차순정렬");
-		
+		accountService.sortByBalanceDescending();
+		System.out.println();
 		
 		
 		System.out.println("11.AccountService야 계좌객체데이타줄께 이름,잔고,이율 수정(update)해줘");
+		accountService.updateAccount(6666, "YANG", 57000, 1.2);
+		System.out.println();
 		
 		
 		
