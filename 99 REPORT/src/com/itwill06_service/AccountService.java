@@ -95,6 +95,13 @@ public class AccountService {
 	 *  5.계좌잔고 인자로 받아서 잔고이상인 계좌들출력
 	 */
 	 public void findByBalancePrint(int balance) {
+		 for (int i = 0; i < accounts.length; i++) {
+			 if(accounts[i].getBalance()>=balance) {
+				 accounts[i].print();
+				 
+			 }
+			
+		}
 		
 	 }
 	 
@@ -102,20 +109,39 @@ public class AccountService {
 	6.계좌이율 인자로 받아서 이율이상인 계좌들출력
 	*/ 
 	public void findByIyulPrint(double iyul) {
-		
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getIyul()>=iyul) {
+				accounts[i].print();
+				
+			}
+			
+		}
 	}
 	
 	/*
 	7.계좌주 이름 인자로 받아서 인자 이름과 동일한 계좌들출력
 	 */ 
 	public void findByNamePrint(String  name) {
-		
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getOwner()==name) {
+				accounts[i].print();
+				
+			}
+		}
 	}
 	
 	/*
 	8.계좌번호,입금할돈 인자로 받아서 입금
 	 */ 
 	public void ipGum(int no,int money ) {
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==no) {
+				accounts[i].deposit(money);
+				accounts[i].print();
+				break;
+			}
+			
+		}
 		
 	}
 	
@@ -123,6 +149,13 @@ public class AccountService {
 	9.계좌번호,출금할돈 인자로 받아서 출금
 	 */ 
 	public void chulGum(int no,int money ) {
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==no) {
+				accounts[i].withdraw(money);
+				accounts[i].print();
+				break;
+			}
+		}
 		
 	}
 	
@@ -130,8 +163,24 @@ public class AccountService {
 	 10.계좌를 잔고순으로 오름차순정렬
 	 */
 	public void sortByBalanceAscending() {
+		for (int i = 0; i < accounts.length-1; i++) {
+			for (int j = 0; j < accounts.length-1; j++) {
+				if(accounts[j].getBalance()>accounts[j+1].getBalance()) {
+					Account temAccount=accounts[j];
+					accounts[j]=accounts[j+1];
+					accounts[j+1]=temAccount;
+				}
+				
+			}
+			
+		}
+		Account.headerPrint();
+		for (int i = 0; i < accounts.length; i++) {
+			accounts[i].print();
+		}
 		
 	}
+	
 	/*
 	 11.계좌를 잔고순으로 내림차순정렬
 	 */
