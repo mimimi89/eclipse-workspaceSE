@@ -1,15 +1,14 @@
+///
 
 public class Account {
 	
-	//멤버필드, 멤버변수, 인스턴스변수
-	
-	private int no;			//계좌번호
-	private String owner; 	//계좌주
-	private int balance; 	//잔고
-	private double iyul;	//이율
+	//멤버필드
+	private int no;			
+	private String owner; 	
+	private int balance; 	
+	private double iyul;	
 	
 	//생성자
-	//alt+shift+s-->o, source에서 constructor using fields
 	public Account(int no, String owner, int balance, double iyul) {
 		this.no=no;
 		this.owner=owner;
@@ -18,9 +17,9 @@ public class Account {
 	}
 	
 	
-	//멤버 메쏘드, 인스턴스 메쏘드
+	//인스턴스 메쏘드
 	
-	//계좌 데이타를 set
+	//계좌 data set
 	public void setAccountData(int no, String owner, int balance, double iyul) {
 		this.no=no;
 		this.owner=owner;
@@ -54,7 +53,6 @@ public class Account {
 	}
 
 	//getter, setter 메쏘드
-	//alt+shift+s-->r, source에서 generate getters and setters
 	public int getNo() {
 		return no;
 	}

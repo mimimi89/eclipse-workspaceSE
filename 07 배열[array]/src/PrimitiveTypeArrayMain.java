@@ -1,3 +1,5 @@
+///
+
 /* 책 198페이지
  배열:  
       - 같은데이타형을 가진 기억장소여러개의 모음 
@@ -61,18 +63,21 @@ public class PrimitiveTypeArrayMain {
 		korArray[7]=93;
 		korArray[8]=12;
 		korArray[9]=98;
+		//int 타입의 객체(주소값)가 10개 들어 있는 int 타입의 배열객체가 생성 됨
 		
-		int korTot=0;
+		int korTot=0;	//korTot 변수 선언, 0으로 초기화
 		
-		for (int o = 0; o < korArray.length; o++) {
+		for (int o = 0; o < korArray.length; o++) {		//0에서 9까지 국어점수 총합계 구하기
 			korTot+=korArray[o];
 			
 		}
 		
 		System.out.println("반 전체 국어 총첨: "+korTot);
+		System.out.println();
 
 		
 		System.out.println("반 전체 국어 평균: "+korTot/korArray.length);
+		System.out.println();
 		
 		char[] ca=new char[6];
 		ca[0]='H';
@@ -83,8 +88,9 @@ public class PrimitiveTypeArrayMain {
 		ca[5]='!';
 		
 		for (int j = 0; j < ca.length; j++) {
-			System.out.println(ca[j]);
+			System.out.print(ca[j]);
 		}
+		System.out.println();
 			
 		System.out.println("--------------배열객체생성초기화--------------");
 		int[] scoreArray= {56, 77, 23, 88, 92, 61, 93, 43, 57, 99};

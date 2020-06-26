@@ -1,3 +1,4 @@
+///
 
 public class PrimitiveTypeArrayStudentMain {
 
@@ -172,7 +173,56 @@ public class PrimitiveTypeArrayStudentMain {
 		System.out.println();
 		System.out.println("-----------* * * * *총점순 내림차순 정렬* * * * *-----------");
 		
-		
+		for (int i = 0; i < totA.length; i++) {
+			for(int j=0;j<totA.length-1;j++) {
+				if(totA[j] < totA[j+1]) {
+					//총점교환
+					int tempTot=totA[j];
+					totA[j]=totA[j+1];
+					totA[j+1]=tempTot;
+					
+					//학번 교환
+					int tempNo=noArray[j];
+					noArray[j]=noArray[j+1];
+					noArray[j+1]=tempNo;
+					
+					//이름 교환
+					String tempName=nameArray[j];
+					nameArray[j]=nameArray[j+1];
+					nameArray[j+1]=tempName;
+					
+					//국어교환
+					int tempKor = korA[j];
+					korA[j]=korA[j+1];
+					korA[j+1]=tempKor;
+					
+					//영어교환
+					int tempEng = engA[j];
+					engA[j]=engA[j+1];
+					engA[j+1]=tempEng;
+
+					int tempMath = mathA[j];
+					mathA[j]=mathA[j+1];
+					mathA[j+1]=tempMath;
+					
+					//평균교환
+					double tempAvg=avrA[j];
+					avrA[j]=avrA[j+1];
+					avrA[j+1]=tempAvg;
+					
+					//평점교환
+					char tempGrade=gradeA[j];
+					gradeA[j]=gradeA[j+1];
+					gradeA[j+1]=tempGrade;
+					
+					//석차교환
+					int tempRank=rankA[j];
+					rankA[j]=rankA[j+1];
+					rankA[j+1]=tempRank;
+					
+				}
+			}
+		}
 	
 		
 		
