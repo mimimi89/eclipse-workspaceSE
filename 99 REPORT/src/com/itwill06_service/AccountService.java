@@ -21,16 +21,41 @@ public class AccountService {
 			new Account(9999, "mIMFF", 12000, 0.7),
 	};
 	
-	/*
-	 * 0.계좌객체를 인자로 받아서 Account[]에추가
-	public void addAccount1() {
-		
-	}
-	public void addAccount2() {
-		
-	}
-	*/
 	
+	
+	public AccountService() {
+		super();
+	}
+
+	//0.계좌객체를 인자로 받아서 Account[]에추가
+	public void addAccount(int no, String owner, int balance, double iyul) {
+		Account newAccount=new Account(no, owner, balance, iyul);
+		//배열에 추가
+		Account[] tempAccounts=new Account[accounts.length+1];
+		for (int i = 0; i < accounts.length; i++) {
+			tempAccounts[i]=accounts[i];
+		}
+		tempAccounts[tempAccounts.length-1] =newAccount;
+		this.accounts=tempAccounts;
+		
+	}
+	
+	
+	public void addAccount(Account newAccount) {
+		
+		Account[] tempAccounts=new Account[accounts.length+1];
+		
+		for(int i=0; i<accounts.length; i++) {
+			tempAccounts[i]=accounts[i];
+		}
+		tempAccounts[tempAccounts.length-1]=newAccount;
+		this.accounts=tempAccounts;
+		
+	}
+	//배열에 추가
+	
+
+		
 	
 	/*
 	 1.은행계좌들 총계좌수 출력 메쏘드 정의
@@ -39,6 +64,11 @@ public class AccountService {
 		System.out.println("은행총계좌수:"+accounts.length);
 	}
 	
+	public AccountService(Account[] accounts) {
+		super();
+		this.accounts = accounts;
+	}
+
 	/*
 	 * 2.은행계좌들 전체 출력 메쏘드 정의
 	 */
@@ -205,12 +235,9 @@ public class AccountService {
 	
 
 	
-	/*
-	15.6666번계좌객체 인자로 받아서 이름,잔고,이율 수정(update)
-	public void updateAccount(Account updateAccount) {
-		
-	}
-	*/
+
+	// 12.6666번계좌객체 인자로 받아서 이름,잔고,이율 수정(update)
+	
 	
 	/*
 	번호,이름,잔고,이율 인자로받아서 계좌객체수정(update)
@@ -218,15 +245,23 @@ public class AccountService {
 	public void updateAccount(int no,String owner,int balance,double iyul) {
 		for (int i = 0; i < accounts.length; i++) {
 			if(accounts[i].getNo()==no) {
-				accounts[i].setOwner(owner);
-				accounts[i].setBalance(balance);
-				accounts[i].setIyul(iyul);
+				accounts[i].setAccountData(no, owner, balance, iyul);
 				accounts[i].print();
 			}
 		}
 		
 	}
 	 
+	public void updateAccount(Account updateAccount) {
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==updateAccount.getNo()) {
+				accounts[i]=updateAccount;
+				accounts[i].print();
+				break;
+			}
+		}
+		
+	}
 	
 	
 }

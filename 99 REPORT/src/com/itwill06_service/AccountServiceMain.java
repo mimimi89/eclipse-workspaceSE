@@ -7,8 +7,17 @@ public class AccountServiceMain {
 		//AccountService 타입의 객체 생성
 		AccountService accountService=new AccountService();
 		
+		System.out.println("0.AccountService야 Account객체데이타여러개 인자로줄께 Account추가해줘(번호중복체크,배열사이즈증가)");
+		accountService.addAccount(1000,"THOU",85000,0.3);
+		accountService.print();
+		System.out.println();
 		
-		//System.out.println("0.Account추가(번호중복체크,배열사이즈증가)");
+		System.out.println("0.AccountService야 Account객체한개 인자로줄께 Account추가해줘(번호중복체크,배열사이즈증가)");
+		Account newAccount=new Account(3000, "THREE", 33000, 3.3);
+		
+		accountService.addAccount(newAccount);
+		accountService.print();
+		System.out.println();
 		
 		
 		System.out.println("1.AccountService야 은행계좌들 총계좌수출력해줘");
@@ -68,10 +77,17 @@ public class AccountServiceMain {
 		System.out.println();
 		
 		
-		System.out.println("11.AccountService야 계좌객체데이타줄께 이름,잔고,이율 수정(update)해줘");
+		System.out.println("12.AccountService야 계좌객체데이타줄께 이름,잔고,이율 수정(update)해줘");
 		accountService.updateAccount(6666, "YANG", 57000, 1.2);
+		//데이터를 트랜스퍼 하기 위한 객체: DTO
+		//accountService.updateAccount(updateAccount);
+		
 		System.out.println();
 		
+		Account updateAccount=new Account(8888, "qIMGG", 91000, 1.7);
+		accountService.updateAccount(updateAccount);
+		
+		System.out.println();
 		
 		
 		

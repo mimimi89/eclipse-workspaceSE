@@ -4,7 +4,7 @@
 	1. 클래스 앞에 붙일 경우,	상속금지 
        ex> public final class Test{}
        
-    2. 멤버메쏘드 앞에 붙일 경우, 	오버라이딩 금지
+    2. 멤버메쏘드 앞에 붙일 경우, 	오버라이딩(재정의) 금지
        ex> public final void print(){}
        
     3. 멤버변수 앞에 붙일 경우--> 상수		//대부분의 경우, static과 같이 쓴다
@@ -38,6 +38,19 @@ public class FinalClass {
 		
 		
 	}
+	
+	
+	public void method1() {
+		System.out.println("FinalClass.method1()");
+		
+	}
+	
+	public final void method2() {
+		System.out.println("FinalClass.method2() 난 final 메쏘드 재정의 금지");
+		
+	}
+	
+	
 	
 	public void move(int direction) {
 		switch(direction) {
