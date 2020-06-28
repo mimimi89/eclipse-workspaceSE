@@ -1,3 +1,5 @@
+//////15항부터 다시 보기 
+
 
 public class AbstractClassMain {
 
@@ -12,6 +14,7 @@ public class AbstractClassMain {
 		
 		AbstractClass ac2=new AbstractClassChild();
 		//객체 생성은 안 되지만 변수 선언은 가능
+		//이게 무슨 말이야?????
 		ac2.method1();
 		ac2.method2();
 		

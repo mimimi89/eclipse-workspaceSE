@@ -1,4 +1,4 @@
-
+////********* 나중에 28항부터 다시 보기(이해가 안 됨)
 public class AcademyMemberArrayCastingMain {
 
 	public static void main(String[] args) {

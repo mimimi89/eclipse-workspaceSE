@@ -9,8 +9,7 @@
          	public void test(){
          	}
          }
-         ==>추상메쏘드: 메쏘드의 구현부분({})이 없고 원형(prototype)
-                         만 존재하는 메쏘드
+         ==>추상메쏘드: 메쏘드의 구현부분({})이 없고 원형(prototype)만 존재하는 메쏘드
             ex> public abstract int print(int i);             
   2. 추상클래스는 불완전한 추상메쏘드를 가지므로 객체 생성이 불가능하다.
       Test t=new Test();(X)
