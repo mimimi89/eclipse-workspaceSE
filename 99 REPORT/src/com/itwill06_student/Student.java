@@ -59,12 +59,13 @@ public class Student {
 	}
 	public static void headerPrint() {
 		System.out.println("---------------학생 성적출력-------------------");
-		System.out.println("학번  이름  국어 영어 수학 총점  평균 평점 석차");
-		System.out.println("-----------------------------------------------");
+		System.out.println(" 학번     이름     국어     영어     수학     총점     평균     평점     석차 ");
+		System.out.println("-------------------------------------------");
 	}
 	public void print() {
 		
-		System.out.println(" "+this.no+"     "+this.name+"   "+this.kor+"   "+this.eng+"    "+this.math+"  "+this.tot+"   "+this.avg+"   "+this.grade+"  "+this.rank);
+		System.out.printf("%2d %5s %4d %4d %4d %4d %5.1f %2c %4d", this.no, this.name, this.kor, this.eng, this.math, this.tot, this.avg, this.grade, this.rank);
+		System.out.println();
 		
 	}
 	
