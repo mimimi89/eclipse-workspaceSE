@@ -3,7 +3,7 @@ public class AcademyStudent extends AcademyMember {
 	
 	public String ban;
 
-	public AcademyStudent(String ban) {
+	public AcademyStudent(String ban) {	//기본 생성자에 부모의 생성자 포함, 생략되었을 뿐
 		this.ban = ban;
 	}
 

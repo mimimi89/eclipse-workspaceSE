@@ -10,7 +10,6 @@ public class AcademyMemberOverridingMain {
 		st1.print();
 		gs1.print();
 		sf1.print();
-		sf1.print();
 		
 		
 		

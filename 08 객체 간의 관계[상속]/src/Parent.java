@@ -13,11 +13,11 @@
  * 
  */
 
-public class Parent {
+public class Parent {		//부모클래스
 	
 	
 	public int member1;
-	public int member2;
+	public int member2;		//멤버변수 2개
 	
 	public void method1() {
 		System.out.println("Parent.method1()");
@@ -27,7 +27,7 @@ public class Parent {
 	}
 	
 	public void parentPrint() {
-		System.out.println(member1+"\t"+member2);
+		System.out.print(member1+"\t"+member2+"\t");	//인스턴스메쏘드 3개
 	}
 
 }

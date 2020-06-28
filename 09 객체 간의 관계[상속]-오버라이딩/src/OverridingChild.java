@@ -14,11 +14,11 @@ public class OverridingChild extends Overriding{
 	
 
 	//상속받은 method2는 은폐되고 재정의된 method만 호출 가능 
-	public void method2() {
+	public void method2() {		//원래는 overriding.method2()를 출력하게 만들어짐
 		System.out.println("-------재정의 method2() start-------");
 		System.out.println("Overriding.method2()를 OverridingChild에서 재정의");
-		System.out.println("this.toString()");
-		System.out.println("super.toString()");
+		System.out.println("this.toString()");		
+		System.out.println("super.toString()");		
 		super.method2();
 		//super this와 같은 self 참조변수
 		//		this와 같은 주소를 가리킨다.

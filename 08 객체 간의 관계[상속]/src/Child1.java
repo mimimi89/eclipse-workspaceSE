@@ -1,5 +1,5 @@
 
-public class Child1 extends Parent{
+public class Child1 extends Parent{		//변수 2개, 메쏘드 3개를 포함하고 있는 parent 클래스르 상속받는 child1 클래스
 	
 	
 	/*
@@ -14,11 +14,11 @@ public class Child1 extends Parent{
 	}
 	
 	public void parentPrint() {
-		System.out.println(member1+"\t"+member2);
+		System.out.print(member1+"\t"+member2+"\t");
 	}
 	*/
 	
-	public int member3;
+	public int member3;		//상속받은 것까지 변수 3개
 	
 	public void method3() {
 		System.out.println("Child1.method3()");

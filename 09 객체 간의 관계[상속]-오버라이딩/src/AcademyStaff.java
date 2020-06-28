@@ -13,7 +13,15 @@ public class AcademyStaff extends AcademyMember {
 		this.depart=depart;
 		
 	}
-	
+	//이전의 스태프 클래스 출력 메쏘드
+	/*
+	 public void staffPrint() {		//출력 메쏘드
+		this.print();					//번호, 이름 출력되고	
+		System.out.println(depart);		//부서까지 출력
+		
+	}
+	 */
+	@Override
 	public void print() {
 		super.print();
 		System.out.println(depart);
