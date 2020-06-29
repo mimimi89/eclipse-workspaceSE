@@ -29,13 +29,12 @@ public class AccountService {
 
 	//0.계좌객체를 인자로 받아서 Account[]에추가
 	public void addAccount(int no, String owner, int balance, double iyul) {
-		Account newAccount=new Account(no, owner, balance, iyul);
-		//배열에 추가
-		Account[] tempAccounts=new Account[accounts.length+1];
-		for (int i = 0; i < accounts.length; i++) {
-			tempAccounts[i]=accounts[i];
+		Account newAccount=new Account(no, owner, balance, iyul);	//새로운 계좌 객체 만들고
+		Account[] tempAccounts=new Account[accounts.length+1];		//배열 객체 크기 늘려주고
+		for (int i = 0; i < accounts.length; i++) {		
+			tempAccounts[i]=accounts[i];		//크기를 늘려준 임시 배열 객체=기존 배열 객체 
 		}
-		tempAccounts[tempAccounts.length-1] =newAccount;
+		tempAccounts[tempAccounts.length-1] =newAccount;	//?
 		this.accounts=tempAccounts;
 		
 	}
@@ -52,9 +51,6 @@ public class AccountService {
 		this.accounts=tempAccounts;
 		
 	}
-	//배열에 추가
-	
-
 		
 	
 	/*

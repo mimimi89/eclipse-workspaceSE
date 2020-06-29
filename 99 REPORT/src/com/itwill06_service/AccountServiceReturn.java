@@ -21,20 +21,45 @@ public class AccountServiceReturn {
 			new Account(8888, "QIM", 77000, 5.2),
 			new Account(9999, "AIM", 80000, 1.2)
 	};
-	/*
-	 * 0.계좌객체인자로 받아서 추가
+	
+	//0.계좌객체인자로 받아서 추가
+	public void addAccount(int no, String owner, int balance, double iyul) {
+		Account newAccount=new Account(no, owner, balance, iyul);
+		Account[] tempAccounts=new Account[accounts.length+1];
+		for (int i = 0; i < accounts.length; i++) {
+			tempAccounts[i]=accounts[i];
+		}
+		tempAccounts[tempAccounts.length-1]=newAccount;
+		this.accounts=tempAccounts;
+	}
+	
 	public void addAccount(Account newAccount) {
 		
+		Account[] tempAccounts=new Account[accounts.length+1];
+		
+		for(int i=0; i<accounts.length; i++) {
+			tempAccounts[i]=accounts[i];
+		}
+		tempAccounts[tempAccounts.length-1]=newAccount;
+		this.accounts=tempAccounts;
 		
 	}
-	 */
-	/*
-	 * 0.계좌번호 인자로받아서 삭제해줘
+
+	
+	
+	//0-1.계좌번호 인자로받아서 삭제해줘
 	public void deleteAccount(int no) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==no) {
+				
+			}
+			
+		}
+		
 		
 	}
-	 */
+	
+	
 	/*
 	 * 1.은행계좌들 총계좌수 반환메써드
 	 */
@@ -46,8 +71,8 @@ public class AccountServiceReturn {
 	 */
 	public void print() {
 		for (int i = 0; i < accounts.length; i++) {
-			//accounts[i].print();
-			System.out.println(accounts[i]);
+			accounts[i].print();
+			
 		}
 	}
 	/*
@@ -55,7 +80,9 @@ public class AccountServiceReturn {
 	 */
 	public int getAccountTotalBalance() {
 		int tot=0;
-		
+		for (int i = 0; i < accounts.length; i++) {
+			tot=tot+accounts[i].getBalance();
+		}
 		return tot;
 	}
 	
@@ -64,8 +91,12 @@ public class AccountServiceReturn {
 	 */
 	public Account  findByNo(int no) {
 		Account findAccount=null;
-		
-		
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==no) {
+				findAccount = accounts[i];
+				break;
+			}
+		}
 		return findAccount;
 	}
 	/*
@@ -86,36 +117,70 @@ public class AccountServiceReturn {
 	/*
 	 * 6.계좌이율(5.0)인자로받아서 인자이상인 계좌들배열객체 참조변수반환
 	 */
-	
+	public Account[] findByIyul(double iyul) {
+		Account[] findAccounts=null;
+		/*
+		 * A.만족하는객체의갯수구하기
+		 * findAccounts=new Account[3];
+		
+		/*
+		 * B.만족하는객체주소담기
+		 */
+		
+		return findAccounts;
+	}
 	/*
 	 * 7.계좌주이름(AIM) 인자로받아서 이름과일치하는계좌들배열객체 참조변수반환
 	 */
-	
+	public Account[] findByName(String name) {
+		Account[] findAccounts=null;
+		/*
+		 * A.만족하는객체의갯수구하기
+		 * findAccounts=new Account[3];
+		
+		/*
+		 * B.만족하는객체주소담기
+		 */
+		
+		return findAccounts;
+	}
 	/*
 	 * 8.계좌번호(6666번)와 입금할돈(4000원)인자로받아서 입금
 	 */
 	public void ipGum(int no,int m) {
-		
+		Account findAccount=this.findByNo(no);
+		findAccount.deposit(m);
 	}
 	/*
 	 * 9.계좌번호(1111번)와 출금할돈(5000원)인자로받아서 출금
 	 */
-	
-	
+	public void chulGum(int no,int money ) {
+		
+	}
+	 
 	
 	/*
-		10.계좌를 잔고순으로 오름차순정렬
-		11.계좌를 잔고순으로 내림차순정렬
-		
+		10.계좌를 잔고순으로 오름차순정렬 0
+		11.계좌를 잔고순으로 내림차순정렬 1
 	*/
 	public void sortByBalance(int type) {
+		switch (type) {
+		case AccountServiceReturn.ASCENDING:
+			//오름차순
+			
+			break;
+
+		case AccountServiceReturn.DESCENDING:
+			//내림차순
+			
+			break;
+		}
 		
 	}
 	/*
 	13.계좌를 예금주이름순(사전순)으로 오름차순정렬(X)
 	 */
 	public void sortByOwnerAscending() {
-		
 		
 		
 	}
