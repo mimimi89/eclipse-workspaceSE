@@ -4,6 +4,9 @@ import com.itwill.shop.member.MemberService;
 import com.itwill.shop.order.Order;
 //줄인 클래스의 이름이 동일한 클래스는 import문에 2개 동시에 기술할 수 없다
 
+//import com.itwill.shop.member.*;
+//com.itwill.shop.member package에 있는 모든 클래스를 import 한다.
+//하지만 com.itwill.shop.member package의 하위 package에 있는 클래스를 import하지는 않음
 
 public class PackagrImportMain {
 

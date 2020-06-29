@@ -1,4 +1,5 @@
-public class AcademyMember{
+public abstract class AcademyMember{
+	//객체생성을 막기 위해 class 앞에 abstract(추상클래스) 기술함
 	
 	private int no;
 	private String name;
