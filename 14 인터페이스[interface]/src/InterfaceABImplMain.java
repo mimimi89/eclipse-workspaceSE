@@ -2,7 +2,7 @@
 public class InterfaceABImplMain {
 
 	public static void main(String[] args) {
-		System.out.println("------------------------InterfaceABImpl---------------------------");
+		System.out.println("-----------------------InterfaceABImpl-----------------------");
 		
 		InterfaceABImpl abImpl=new InterfaceABImpl();
 		
@@ -25,6 +25,19 @@ public class InterfaceABImplMain {
 		
 		ib.method3();
 		ib.method4();
+		
+		System.out.println("--------------------------Object-----------------------------");
+		Object o=abImpl;
+		
+		System.out.println("----------------InterfaceA<-->InterfaceB---------------------");
+		InterfaceA ia2=new InterfaceABImpl();
+		ia2.method1();
+		ia2.method2();
+		InterfaceB ib2=(InterfaceB)ia2;
+		ib2.method3();
+		ib2.method4();
+		
+		
 		
 		
 		
