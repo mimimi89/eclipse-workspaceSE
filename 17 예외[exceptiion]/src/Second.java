@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.net.Socket;
 
 public class Second {
 	
-	public void method2() {
+	public void method2() throws IOException, ClassNotFoundException{
 		System.out.println("\t\t second.method2() 실행");
 		/*************** case1 *****************/
 		/*
@@ -20,15 +21,13 @@ public class Second {
 		2. 예외객체를 던진다.
 		3. 이때 실행 중인 쓰레드는 실행을 멈추고 예외의 기작(machanism)이 시작된다.
 		*/
-		boolean b=false;
+		boolean b=true;
 		if(b) {
 			NullPointerException exception=new NullPointerException("널애로사항발생");
 			throw exception;
 			
 		}
 		
-		System.out.println("\t\t second.method2() 반환");
-		return;
 		
 		/*************** case3 *****************/
 		/*
@@ -37,7 +36,10 @@ public class Second {
 		Socket socket=new Socket();
 		socket.getInputStream();
 		
+		Class.forName("xxx");
 		
+		
+		System.out.println("\t\t second.method2() 반환");
 		
 		
 		
