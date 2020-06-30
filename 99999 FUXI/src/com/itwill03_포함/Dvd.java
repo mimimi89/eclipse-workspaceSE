@@ -2,7 +2,9 @@ package com.itwill03_포함;
 
 
 public class Dvd {
-	//번호
+	private int dvdNo;
+	private String title;
+	
 	//타이틀
 	//쟝르
 	

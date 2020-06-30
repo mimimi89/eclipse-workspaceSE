@@ -89,7 +89,7 @@ public class AccountServiceReturn {
 	/*
 	 * 4.계좌번호(3333)를 인자로받아서 계좌객체주소 한개반환
 	 */
-	public Account  findByNo(int no) {
+	public Account findByNo(int no) {
 		Account findAccount=null;
 		for (int i = 0; i < accounts.length; i++) {
 			if(accounts[i].getNo()==no) {
@@ -107,11 +107,25 @@ public class AccountServiceReturn {
 		/*
 		 * A.만족하는객체의갯수구하기
 		 * findAccounts=new Account[3];
+		 */
+		int count=0;
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getBalance()>balance) {
+				count++;
+			}
+		}
 		
 		/*
 		 * B.만족하는객체주소담기
 		 */
-		
+		findAccounts=new Account[count];
+		int index=0;
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getBalance()>balance) {
+				findAccounts[index]=accounts[i];
+				index++;
+			}
+		}
 		return findAccounts;
 	}
 	/*

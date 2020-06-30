@@ -34,9 +34,7 @@ public class Account extends Object{
 	/*
 	 * 계좌객체에 데이타 set 메쏘드
 	 */
-	public void setAccountData(
-			int no,String owner,
-			int balance,double iyul ) {
+	public void setAccountData(int no,String owner,int balance,double iyul ) {
 		this.no=no;
 		this.owner=owner;
 		this.balance=balance;

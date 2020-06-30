@@ -28,20 +28,20 @@ public class Student {
 	}
 	
 	//총점 계산시 필요한 기본데이타를 인자로 놓고, 메쏘드 내부에서 계산과 반환
-	public int totScore(int kor, int eng, int math) {
+	public int totScore() {
 		this.tot=kor+eng+math;
 		return tot;
 	}
 	
 	//평균 계산시 필요한 총점값을 인자로 놓고, 메쏘드 내부에서 계산과 반환
-	public double avgScore(int tot) {
+	public double avgScore() {
 		this.avg=tot/3;
 		return avg;
 	}
 	
 	
 	//평점계산, 출력
-	public char grade(double avg) {
+	public void gradeScore() {
 		if(this.avg>90&&this.avg<=100) {
 			this.grade='A';
 			
@@ -58,7 +58,6 @@ public class Student {
 			this.grade='F';
 		}
 		
-		return grade;
 	}
 	
 	//출력 메쏘드
