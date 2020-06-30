@@ -1,4 +1,4 @@
-package com.itwill04_array;
+package com.itwill04_array_optionA;
 
 public class Account {
 	/*
