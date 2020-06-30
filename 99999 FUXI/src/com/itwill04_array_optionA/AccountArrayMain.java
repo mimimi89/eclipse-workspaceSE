@@ -54,26 +54,80 @@ public class AccountArrayMain {
 				accounts[i].print();
 				break;
 			}
-			
 		}
 		System.out.println("-------------------------");
 		System.out.println();
 		
-		
-		
 		System.out.println("5.은행계좌들중에서 계좌잔고 50000원이상 계좌들찾아 출력 ");
+		System.out.println("-------------------------");
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getBalance()>=50000) {
+				accounts[i].print();
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println();
+		
 		System.out.println("6.은행계좌들중에서 계좌이율 5.0이상 계좌들찾아 출력 ");
+		System.out.println("-------------------------");
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getIyul()>=5.0) {
+				accounts[i].print();
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println();
 		
 		System.out.println("7.6666번계좌 5000원 입금");
+		System.out.println("-------------------------");
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==6666) {
+				accounts[i].deposit(5000);
+				accounts[i].print();
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println();
 		
 		System.out.println("8.8888번계좌 3000원 출금");
-		
+		System.out.println("-------------------------");
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==8888) {
+				accounts[i].withdraw(3000);
+				accounts[i].print();
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println();
 		
 		System.out.println("9.계좌를 잔고순으로 오름(내림)차순정렬");
+		for (int i = 0; i < accounts.length-1; i++) {
+			for (int j = 0; j < accounts.length-1; j++) {
+				if(accounts[j].getBalance()>accounts[j+1].getBalance()) {
+					Account tempAccounts=accounts[j];
+					accounts[j]=accounts[j+1];
+					accounts[j+1]=tempAccounts;
+				}
+			}
+		}//첫 번째 for문 밖에서 출력
+		Account.headerPrint();
+		for (int i = 0; i < accounts.length; i++) {
+			accounts[i].print();	
+		}
 		
+		System.out.println("-------------------------");
+		System.out.println();
 		
 		System.out.println("10.6666계좌의 이율을 9.0로변경");
-		
+		System.out.println("-------------------------");
+		for (int i = 0; i < accounts.length; i++) {
+			if(accounts[i].getNo()==6666) {
+				accounts[i].setIyul(9.0);
+				accounts[i].print();
+			}
+		}
+		System.out.println("-------------------------");
+		System.out.println();
 		
 		Account.headerPrint();
 		for (int i = 0; i < accounts.length; i++) {
