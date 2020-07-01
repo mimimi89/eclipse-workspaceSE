@@ -53,12 +53,12 @@ public class StudentArrayMain {
 			students[i].print();
 			
 		}
-		System.out.println("-------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println();
 		
 		
 		System.out.println("4.번호 3번 학생 한 명 출력  ");
-		System.out.println("-------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		for (int i = 0; i < students.length; i++) {
 			if(students[i].getNo()==3) {
 				students[i].print();
@@ -66,34 +66,40 @@ public class StudentArrayMain {
 			}
 		}
 		
-		System.out.println("-------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println();
 
 
 		System.out.println("5. 학점 A인 학생들 출력");
-		System.out.println("-------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		for (int i = 0; i < students.length; i++) {
 			if(students[i].getGrade()=='A') {
 				students[i].print();
 			}
 		}
-		System.out.println("-------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println();
 
 		//////??????
 		System.out.println("6. 학생총점으로 오름차순정렬");
-		Student.headerPrint();
-		for (int i = 0; i < students.length; i++) {
-			for (int j = 0; j < students.length; j++) {
-				if(students[j].getTot() > students[j+1].getTot()) {
-					Student tempStudent=students[j];
-					students[j]=students[j+1];
-					students[j+1]=tempStudent;
+		for (int i = 0; i < students.length-1; i++) {
+			for (int k = 0; k < students.length-1; k++) {
+				if(students[k].getTot()>students[k+1].getTot()) {
+					Student tempStu=students[k];
+					students[k]=students[k+1];
+					students[k+1]=tempStu;
+					
 				}
 			}
-			students[i].print();
 		}
-		System.out.println("-------------------------------------------------------");
+		//for문 밖에서 따로 출력
+		Student.headerPrint();
+		for (int i = 0; i < students.length; i++) {
+			students[i].print();
+			
+		}
+		
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println();
 		
 	
@@ -102,10 +108,12 @@ public class StudentArrayMain {
 		 */
 		System.out.println("8.학생이름순으로 오름차순정렬");
 		
-		Student.headerPrint();
-		for (int i = 0; i < students.length; i++) {
-			students[i].print();
-		}
+		
+		
+		
+		
+		
+		
 	}
 	
 
