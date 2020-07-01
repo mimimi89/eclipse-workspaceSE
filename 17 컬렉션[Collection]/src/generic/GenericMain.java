@@ -15,9 +15,27 @@ public class GenericMain {
 		Car getCar=(Car)noGenericClass.getMember();
 		getCar.print();
 		
+		System.out.println("------------------ Generic ----------------------");
+		GenericClass<String> genericClass=new GenericClass<String>();
+		genericClass.setMember("스트링");
+		String str=genericClass.getMember();
+		System.out.println(str);
 		
+		GenericClass<Account> genericClass1=new GenericClass<Account>();
+		genericClass1.setMember(new Account(1111, "one", 10000, 1.1));
+		Account acc=genericClass1.getMember();
+		acc.print();
 		
-		
+		GenericClass<Car> genericClass2=new GenericClass<Car>();
+		genericClass2.setMember(new Car("3245", 7));
+		Car car=genericClass2.getMember();
+		car.print();
+	
+	
+	
+	
+	
+	
 	}
 
 }
