@@ -17,50 +17,88 @@ public class StudentArrayMain {
 				
 		};
 		
-		/*
-		 * 1. 전체학생총점,평균,평점계산
-		 */
-		System.out.println("1. 전체학생총점,평균,평점계산");
+		//Student 배열 객체 생성 
 		
 		
-		/*
-		 * 2. 전체학생 총점으로 석차계산
-		 */
+		System.out.println();
+		System.out.println("1. 전체학생 총점,평균,평점계산");
+		for (int i = 0; i < students.length; i++) {
+			students[i].calculateTotal();
+			students[i].calculateAvg();
+			students[i].calculateGrade();
+		}
+		System.out.println();
+
+		//??????????
 		System.out.println("2. 전체학생 총점으로 석차계산");
-		/*
-		 * 3. 전체학생출력
-		 */
+		for (int i = 0; i < students.length; i++) {
+			int rank=0;
+			for (int j = 0; j < students.length; j++) {
+				if(students[j].getTot()<students[j+1].getTot()) {
+					rank++;
+				}
+				students[i].setRank(rank);
+			
+			}
+			students[i].print();
+			
+		}
+		
+		
+		System.out.println();
+		
+		
 		System.out.println("3. 전체학생출력 ");
-		/*
-		 * 4. 번호3번 학생한명 출력  
-		 */
-		System.out.println("4.번호3번 학생한명 출력  ");
+		System.out.println();
+		Student.headerPrint();
+		for (int i = 0; i < students.length; i++) {
+			students[i].print();
+			
+		}
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
 		
-		/*
-		 * 5. 학점A인 학생들 출력
-		 */
 		
-		System.out.println("5. 학점A인 학생들 출력");
+		System.out.println("4.번호 3번 학생 한 명 출력  ");
+		System.out.println("-------------------------------------------------------");
+		for (int i = 0; i < students.length; i++) {
+			if(students[i].getNo()==3) {
+				students[i].print();
+				break;
+			}
+		}
 		
-		/*
-		 * 6. 학생총점으로 오름차순정렬
-		 */
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
+
+
+		System.out.println("5. 학점 A인 학생들 출력");
+		System.out.println("-------------------------------------------------------");
+		for (int i = 0; i < students.length; i++) {
+			if(students[i].getGrade()=='A') {
+				students[i].print();
+			}
+		}
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
+
+		//////??????
 		System.out.println("6. 학생총점으로 오름차순정렬");
-		
-		
 		Student.headerPrint();
-		for (int i = 0; i < students.length; i++) {
+		for (int i = 0; i < students.length-1; i++) {
+			for (int j = 0; j < students.length-1; j++) {
+				if(students[j].getTot()<students[j+1].getTot()) {
+					Student tempStudent=students[j];
+					students[j]=students[j+1];
+					students[j+1]=tempStudent;
+				}
+			}
 			students[i].print();
 		}
-		/*
-		  7. 학생학점순으로 오름차순정렬
-		 */
-		System.out.println("6. 학생학점순으로 오름차순정렬");
+		System.out.println("-------------------------------------------------------");
+		System.out.println();
 		
-		Student.headerPrint();
-		for (int i = 0; i < students.length; i++) {
-			students[i].print();
-		}
+	
 		/*
 		 8. 학생이름순으로 오름차순정렬(과제아닙니다..)
 		 */
