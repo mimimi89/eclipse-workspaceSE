@@ -36,7 +36,7 @@ public class AccountServiceArrayList {
 	/*
 	 * 계좌전체반환
 	 */
-	public ArrayList  getAccountList() {
+	public ArrayList<Account>  getAccountList() {
 		return accountList;
 	}
 	/*
