@@ -31,18 +31,16 @@ public class StudentArrayMain {
 
 		//??????????
 		System.out.println("2. 전체학생 총점으로 석차계산");
+		
 		for (int i = 0; i < students.length; i++) {
-			int rank=0;
 			for (int j = 0; j < students.length; j++) {
-				if(students[j].getTot()<students[j+1].getTot()) {
-					rank++;
+				if(students[i].getTot() < students[j].getTot()) {
+					students[i].setRank(students[i].getRank()+1);
 				}
-				students[i].setRank(rank);
-			
+				
 			}
-			students[i].print();
-			
 		}
+			
 		
 		
 		System.out.println();
