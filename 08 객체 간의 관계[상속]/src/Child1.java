@@ -1,5 +1,7 @@
+///
 
-public class Child1 extends Parent{		//변수 2개, 메쏘드 3개를 포함하고 있는 parent 클래스르 상속받는 child1 클래스
+public class Child1 extends Parent{		
+//변수 2개, 메쏘드 3개를 포함하고 있는 parent 클래스르 상속받는 child1 클래스
 	
 	
 	/*

@@ -17,15 +17,7 @@ public class CarArrayMain {
 		};
 		
 		//30개의 car 객체를 담을 수 있는 car 배열 객체 carArray 생성됨
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				
 		System.out.println("1.전체차량출력");
 		Car.headerPrint();
 		for (int i = 0; i < carArray.length; i++) {
