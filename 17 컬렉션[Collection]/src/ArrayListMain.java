@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListMain {
 	
@@ -17,10 +18,16 @@ public class ArrayListMain {
 		anyTypeArray[2]=acc3;
 		anyTypeArray[3]=acc4;
 		anyTypeArray[4]=acc5;
+		//다섯 개의 account를 담을 수 있는 Object 배열 객체 하나를 생성함
+		
+		
 		
 		for (int i = 0; i < anyTypeArray.length; i++) {
 			Account tempAccount=(Account)anyTypeArray[i];
-			tempAccount.print();	//꺼낼 때 캐스팅 필요함
+			//account 타입의 임시 공간에 캐스팅한 Object 배열 객체를 담아서
+			tempAccount.print();
+			//출력
+			
 		}
 		System.out.println();
 		System.out.println("---------ArrayList[참조형]-----------");
@@ -124,6 +131,17 @@ public class ArrayListMain {
 			
 		}
 		System.out.println(accountList);
+		
+		System.out.println();
+		System.out.println("**************** iteration ******************");
+		System.out.println("************ iteration의 사용법 *************");
+		Iterator accountIter=accountList.iterator();
+		while(accountIter.hasNext()) {
+			Account tempAccount=(Account)accountIter.next();
+			tempAccount.print();
+		}
+		
+		
 		
 		
 		

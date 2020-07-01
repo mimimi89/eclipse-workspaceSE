@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 
 
 public class HashSetMain {
@@ -34,6 +35,7 @@ public class HashSetMain {
 		
 		System.out.println("******************* 2.remove *********************");
 		boolean isRemove=accountSet.remove(acc5);
+		
 		System.out.println("삭제여부: "+isRemove);
 		System.out.println("#size: "+accountSet.size());
 		System.out.println(accountSet);
@@ -55,12 +57,19 @@ public class HashSetMain {
 		System.out.println();
 		
 		System.out.println("******************* 4.clear *********************");
-		accountSet.clear();
+		//accountSet.clear();
 		if(accountSet.isEmpty()) {
 			System.out.println("isEmpty()-->"+accountSet.size());
 		}
 		
 		
+		System.out.println("**************** iteration ******************");
+		System.out.println("************ iteration의 사용법 *************");
+		Iterator accountIter=accountSet.iterator();
+		while(accountIter.hasNext()) {
+			Account tempAccount=(Account)accountIter.next();
+			tempAccount.print();
+		}
 		
 		
 		

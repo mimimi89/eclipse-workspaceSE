@@ -1,4 +1,6 @@
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 public class HashMapMain {
 
@@ -45,7 +47,25 @@ public class HashMapMain {
 		if(carMap.containsKey("7878")) {
 			carMap.remove("7878");
 		}
+		System.out.println();
 		
+		
+		System.out.println("******************* 4.clear *********************");
+		//carMap.clear();	
+		//쇼핑몰에서 장바구니 비우기와 같은 개념
+		System.out.println("#size: "+carMap.size());
+		//carMap=null;		
+		//이렇게 지우면 안됨, 장바구니를 아예 없애는 것
+		
+		
+		System.out.println("**************** iteration ******************");
+		Set keySet=carMap.keySet();
+		Iterator keyIter=keySet.iterator();
+		while (keyIter.hasNext()) {
+			String key=(String)keyIter.next();
+			Car tempCar=(Car)carMap.get(key);
+			tempCar.print();
+		}
 		
 		
 		
