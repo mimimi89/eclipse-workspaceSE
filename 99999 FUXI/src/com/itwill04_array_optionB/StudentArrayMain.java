@@ -83,9 +83,9 @@ public class StudentArrayMain {
 		//////??????
 		System.out.println("6. 학생총점으로 오름차순정렬");
 		Student.headerPrint();
-		for (int i = 0; i < students.length-1; i++) {
-			for (int j = 0; j < students.length-1; j++) {
-				if(students[j].getTot()<students[j+1].getTot()) {
+		for (int i = 0; i < students.length; i++) {
+			for (int j = 0; j < students.length; j++) {
+				if(students[j].getTot() > students[j+1].getTot()) {
 					Student tempStudent=students[j];
 					students[j]=students[j+1];
 					students[j+1]=tempStudent;

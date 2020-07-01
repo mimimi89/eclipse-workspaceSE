@@ -55,15 +55,20 @@ public class Car {
 				
 	}
 	
-	public void headerPrint() {
+	public static void headerPrint() {
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
 		System.out.printf("  %4s\t %4s\t %4s\t %4s\t", "차량번호", "입차시간", "출차시간", "주차요금");
 		System.out.println();
 		System.out.println("-----*-----*-----*-----*-----*-----*-----*-----*----*-----*");
 		
 	}
-	
-	
+	/*
+	@Override
+	public String toString() {
+		return "Car [no=" + no + ", inTime=" + inTime + ", outTime=" + outTime + ", fee=" + fee + "]";
+	}
+	*/
+
 	
 	//영수증 출력
 	public void print() {
@@ -102,6 +107,8 @@ public class Car {
 		this.fee = fee;
 	}
 
+
+	
 	
 	
 }//class

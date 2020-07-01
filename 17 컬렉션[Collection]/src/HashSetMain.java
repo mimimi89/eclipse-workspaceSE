@@ -36,9 +36,29 @@ public class HashSetMain {
 		boolean isRemove=accountSet.remove(acc5);
 		System.out.println("삭제여부: "+isRemove);
 		System.out.println("#size: "+accountSet.size());
+		System.out.println(accountSet);
+		System.out.println();
 		
+		System.out.println("******************* 3.contains *********************");
+		if(!accountSet.contains(acc5)) {
+			System.out.println("["+acc5.hashCode()+"] 객체 존재 안함");
+		}
+		System.out.println();
 		
+		System.out.println("***************** 전체출력 *********************");
+		Object[] oa=accountSet.toArray();
+		for (int i = 0; i < oa.length; i++) {
+			Account tempAccount=(Account)oa[i];
+			tempAccount.print();
+			
+		}
+		System.out.println();
 		
+		System.out.println("******************* 4.clear *********************");
+		accountSet.clear();
+		if(accountSet.isEmpty()) {
+			System.out.println("isEmpty()-->"+accountSet.size());
+		}
 		
 		
 		
