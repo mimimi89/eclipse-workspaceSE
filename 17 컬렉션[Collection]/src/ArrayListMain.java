@@ -27,6 +27,7 @@ public class ArrayListMain {
 		System.out.println(accountList.toString());
 		System.out.println("#.size: "+accountList.size());
 		
+		
 		System.out.println("********** 1. add ***********");
 		accountList.add(acc1);
 		accountList.add(acc2);
@@ -38,9 +39,11 @@ public class ArrayListMain {
 		//accountList.add(acc3);	//중복허용
 		System.out.println(accountList.toString());
 		
+		
 		System.out.println("********** 2. set ***********");
 		accountList.set(3, new Account(4445, "FOUR",44000, 0.4));
 		System.out.println(accountList.toString());
+		
 		
 		System.out.println("********** 3. get ***********");
 		Object getObject=accountList.get(1);
@@ -49,10 +52,12 @@ public class ArrayListMain {
 		getAccount=(Account)accountList.get(4);
 		getAccount.print();
 		
+		
 		System.out.println("********** 4.remove ***********");
 		accountList.remove(accountList.size()-1);
 		System.out.println("#.size: "+accountList.size());
 		System.out.println(accountList);
+		
 		
 		System.out.println("********** 5.전체출력 ***********");
 		for (int i = 0; i < anyTypeArray.length; i++) {
@@ -61,6 +66,14 @@ public class ArrayListMain {
 			
 		}
 		
+		System.out.println("********** 5.전체출력[enhanced for] ***********");
+		//index 없이 출력할 때 사용하는 방법
+		for (Object account:accountList) {
+			Account tempAccount=(Account)account;
+			
+			
+			
+		}
 		
 		
 		
