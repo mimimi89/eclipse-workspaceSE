@@ -19,21 +19,39 @@ public class AcademyMemberService {
 			new AcademyStaff(8, "AIM", "영업"),
 			new AcademyStaff(9, "QIM", "생산")
 	};
+		//AcademyMember 배열 객체 생성(9개)
+		//상위로의 캐스팅
 	
+	
+	// 배열객체 member를 반환하는 getMembers() 메쏘드
 	public AcademyMember[] getMembers() {
 		return members;
 	}
 	
+	//출력 메쏘드
 	public void print() {
 		for (int i = 0; i < members.length; i++) {
 			AcademyMember academyMember = members[i];
 			academyMember.print();
 		}
 	}
+	
+	//번호로 찾는 메쏘드
 	public AcademyMember findAcademyMemberByNo(int no) {
+		for (int i = 0; i < members.length; i++) {
+			AcademyMember academyMember=members[i];
+			
+		}
 		AcademyMember findMember=null;
 		return findMember;
 	}
+	
+	
+	
+	
+	
+	
+	
 	public AcademyMember[] findAcademyMemberByName(String name) {
 		AcademyMember[] findMembers=null;
 		return findMembers;

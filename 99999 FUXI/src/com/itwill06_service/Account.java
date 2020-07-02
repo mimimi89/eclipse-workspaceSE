@@ -4,6 +4,8 @@ package com.itwill06_service;
  * 은행의계좌를 추상화한 클래스
  */
 public class Account extends Object{
+	//최상위 클래스 object를 상속받는 account 클래스
+	
 	/*
 	 * 속성(attribute)
 	 * 멤버변수
@@ -12,13 +14,14 @@ public class Account extends Object{
 	private String owner;//계좌주
 	private int balance;//잔고
 	private double iyul;//이율
+	
 	/*
 	 * 생성자
 	 */
-	
 	public Account() {
 		
 	}
+	
 	public Account(int no, String owner, int balance, double iyul) {
 		this.no = no;
 		this.owner = owner;
@@ -31,6 +34,7 @@ public class Account extends Object{
 	 * 행위(operation)
 	 * 멤버메쏘드
 	 */
+	
 	/*
 	 * 계좌객체에 데이타 set 메쏘드
 	 */
@@ -39,13 +43,15 @@ public class Account extends Object{
 		this.owner=owner;
 		this.balance=balance;
 		this.iyul=iyul;
-	} 
+	}
+	
 	/*
 	 * 입금
 	 */
 	public void deposit(int m) {
 		this.balance+=m;
 	}
+	
 	/*
 	 * 출금
 	 */
@@ -59,6 +65,7 @@ public class Account extends Object{
 		this.balance=this.balance-m;
 		return;
 	}
+	
 	/*
 	 * 계좌정보출력
 	 */

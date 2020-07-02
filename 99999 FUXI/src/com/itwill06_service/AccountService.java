@@ -27,29 +27,32 @@ public class AccountService {
 	  1.계좌데이타들  인자로받아서 Account[]에추가
 	  2.계좌객체를    인자로받아서 Account[]에추가
 	*/
+	
 	public void addAccount(int no, String owner, int balance, double iyul) {
 		Account newAccount = new Account(no, owner, balance, iyul);
-		/*
-		 * 배열에추가
-		 */
+		 //배열에 추가하고
+		 
 		Account[] tempAccounts=new Account[accounts.length+1];
+		//배열 사이즈 늘리고
+		
 		for (int i = 0; i < accounts.length; i++) {
 			tempAccounts[i]=accounts[i];
 		}
 		tempAccounts[tempAccounts.length-1] =newAccount;
 		this.accounts=tempAccounts;
 	}
-	public void addAccount(Account newAccount) {
-		/*
-		 * 배열에추가
-		 */
-		Account[] tempAccounts=new Account[accounts.length+1];
-		for (int i = 0; i < accounts.length; i++) {
-			tempAccounts[i]=accounts[i];
-		}
-		tempAccounts[tempAccounts.length-1] =newAccount;
-		this.accounts=tempAccounts;
-	}
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/*
 	 1.은행계좌들 총계좌수출력메쏘드정의

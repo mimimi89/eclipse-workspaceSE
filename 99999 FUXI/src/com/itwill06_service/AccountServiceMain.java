@@ -5,8 +5,20 @@ public class AccountServiceMain {
 
 	public static void main(String[] args) {
 		AccountService accountService=new AccountService();
-		System.out.println("0.AccountService야 Account객체데이타여러개 인자로줄께 Account추가해줘(번호중복체크,배열사이즈증가)");
+		
+		
+		System.out.println(
+				"0.AccountService야 Account객체데이타여러개 인자로줄께 Account추가해줘(번호중복체크,배열사이즈증가)");
+
 		accountService.addAccount(1000,"THOU",85000,0.3);
+		System.out.println(accountService);
+		
+		
+		
+		
+		
+		
+		/*
 		System.out.println("0.AccountService야 Account객체한개 인자로줄께 Account추가해줘(번호중복체크,배열사이즈증가)");
 		Account newAccount=new Account(3000, "THREE", 33000, 3.3);
 		accountService.addAccount(newAccount);
@@ -37,6 +49,8 @@ public class AccountServiceMain {
 				+ "계좌객체 한개줄께 이름,잔고,이율 수정(update)해줘");
 		Account updateAccount=new Account(8888, "qIMGG", 91000, 1.7);
 		accountService.updateAccount(updateAccount);
+		
+		*/
 	}
 
 }

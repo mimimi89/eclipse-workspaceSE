@@ -1,12 +1,19 @@
 package com.itwill.상속;
 
-public class ChildC {
+public class ChildC extends Parent  {
 
-	public int member1;
-	public int member2;
+
 	public int memberC;
 	
-	
+	public void methodC() {
+		
+	}
+
+	@Override
+	public void method2() {
+		System.out.println("ChildC methode1()");
+		
+	}
 	
 	
 	
