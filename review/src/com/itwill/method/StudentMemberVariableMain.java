@@ -2,7 +2,7 @@
  source> java ReviewMain 
  */
 
-package com.itwill.review;
+package com.itwill.method;
 
 public class StudentMemberVariableMain {
 	//접근제한 키워드 식별자

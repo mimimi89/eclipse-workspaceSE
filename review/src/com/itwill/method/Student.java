@@ -1,4 +1,4 @@
-package com.itwill.review;
+package com.itwill.method;
 
 public class Student {
 	
