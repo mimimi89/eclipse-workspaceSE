@@ -1,5 +1,6 @@
 
 public class GajunAudio implements GajunOnOff, GajunVolume{
+	//onoff, volume 두 개의 인터페이스를 가전 오디오 클래스에서 구현 
 	
 	@Override
 	public void turnOn() {
@@ -20,7 +21,6 @@ public class GajunAudio implements GajunOnOff, GajunVolume{
 
 	@Override
 	public void down() {
-		// TODO Auto-generated method stub
 		System.out.println("GajunAudio.volumeDown()");
 		
 	}

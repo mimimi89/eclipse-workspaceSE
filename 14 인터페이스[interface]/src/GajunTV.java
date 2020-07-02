@@ -1,16 +1,7 @@
 public class GajunTV implements GajunOnOff, GajunVolume {
+	//onoff, volume 두 개의 인터페이스를 가전 티비 클래스에서 구현 
 
-    public void operation1(){
-    }
-
-    public void operation2(){
-    }
-
-    public void operation3(){
-    }
-
-    public void operation4(){
-    }
+    
     
     @Override
 	public void turnOn() {
@@ -38,7 +29,18 @@ public class GajunTV implements GajunOnOff, GajunVolume {
 		
 	}
 	
+	//4개의 기능이 추가
+	public void operation1(){
+    }
 
+    public void operation2(){
+    }
+
+    public void operation3(){
+    }
+
+    public void operation4(){
+    }
     
 
 }
