@@ -86,12 +86,15 @@ public class ArrayListMain {
 		
 		System.out.println();
 		System.out.println("********** 3333번 계좌 출력 ***********");
-		for (int i = 0; i < accountList.size(); i++) {
+		
+		for (int i = 0; i < anyTypeArray.length; i++) {
 			Account tempAccount=(Account)accountList.get(i);
-			if(tempAccount.getNo()==5555) {
+			if(tempAccount.getNo()==3333) {
 				tempAccount.print();
 				break;
 			}
+
+					
 		}
 		
 		System.out.println();

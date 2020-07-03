@@ -12,7 +12,7 @@ public class AcademyMemberServiceMain {
 		System.out.println("---------------------------------------------");
 		
 		System.out.println();
-		System.out.println("2-1.번호 1 번 AcademyMember 객체 참조변수반환해줘");
+		System.out.println("2-1.AcademyMember[] 객체 번호 1번 참조변수반환해줘");
 		System.out.println("---------------------------------------------");
 		
 		academyMemberService.findAcademyMemberByNo(1);

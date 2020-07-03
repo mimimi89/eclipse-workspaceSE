@@ -135,16 +135,113 @@ public class ArrayListMain {
 			tempAccount.print();
 		}
 		
+		System.out.println("------------ArrayList[기본형(Wrapper, String)]---------------");
+		ArrayList<Integer> scoreList=new ArrayList<Integer>();
+		scoreList.add(90);
+		scoreList.add(30);
+		scoreList.add(45);
+		scoreList.add(34);
+		scoreList.add(12);
+		scoreList.add(99);
+		scoreList.add(62);
+		scoreList.add(43);
 		
 		
+		System.out.println("--------------add---------------");
+		System.out.println(scoreList);
+		System.out.println();
+		
+		System.out.println("--------------get---------------");
+		Integer getScore0=scoreList.get(0);
+		System.out.println(getScore0.intValue());
+		int getScoreLast=scoreList.get(scoreList.size()-1);
+		System.out.println(getScoreLast);
+		System.out.println();
+		
+		System.out.println("--------------set---------------");
+		scoreList.set(0, new Integer(100));
+		scoreList.set(1, 100);
+		System.out.println(scoreList);
+		System.out.println();
+		
+		System.out.println("------remove(int index)------");
+		int removeScore=scoreList.remove(0);
+		System.out.println("removeScore: "+removeScore);
+		System.out.println("size: "+scoreList.size());
+		System.out.println();
+		
+		//think(볼 필요 없음)
+		System.out.println("-----remove(Object o)------");
+		System.out.println(scoreList);
+		scoreList.remove(new Integer(100));
+		System.out.println(scoreList);
 		
 		
+		System.out.println("--------------전체 출력---------------");
+		for (int i = 0; i < scoreList.size(); i++) {
+			int score=scoreList.get(i);
+			System.out.print(score+" ");
+			
+		}
+		System.out.println();
 		
 		
+		System.out.println("--------------전체 출력[Iteration]---------------");
+		Iterator<Integer> scoreIter=scoreList.iterator();
+		while(scoreIter.hasNext()) {
+			int tempScore=scoreIter.next();
+			System.out.print(tempScore+" ");
+		}
 		
 		
+		System.out.println("------------ArrayList[String]---------------");
+		System.out.println("--------------add---------------");
+		ArrayList<String> nameList=new ArrayList<String>();
+		nameList.add("kim");
+		nameList.add("sim");
+		nameList.add("cim");
+		nameList.add("vim");
+		String str=new String("uim");
+		nameList.add(str);
+		nameList.add("tim");
+		nameList.add("iim");
+		nameList.add("bim");
+		nameList.add("kim");
+		nameList.add("fim");
+		nameList.add("aim");
+		
+		System.out.println("size: "+nameList.size());
+		nameList.add("hhh");
+		nameList.add(0,"kkk");
+		System.out.println("size: "+nameList.size());
+		System.out.println(nameList);
 		
 		
+		System.out.println("--------------set---------------");
+		nameList.set(3, "THREE");
+		System.out.println(nameList);
+		
+		
+		System.out.println("------remove(int index)------");
+		nameList.remove(5);
+		System.out.println(nameList);
+		
+		System.out.println("-----remove(Object o)------");
+		nameList.remove(new String("kim"));
+		System.out.println(nameList);
+		
+		System.out.println("--------------전체 출력---------------");
+		for (String name:nameList) {
+			System.out.print(name+" ");
+		}
+		System.out.println();
+		
+		System.out.println("--------------전체 출력[Iteration]---------------");
+		Iterator<String> nameIter=nameList.iterator();
+		while(nameIter.hasNext()) {
+			String name=nameIter.next();
+			System.out.print(name+" ");
+		}
 		
 		
 		

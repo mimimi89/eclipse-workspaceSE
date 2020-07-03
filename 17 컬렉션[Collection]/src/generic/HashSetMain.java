@@ -1,6 +1,7 @@
 package generic;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 
 public class HashSetMain {
@@ -71,6 +72,60 @@ public class HashSetMain {
 			Account tempAccount=accountIter.next();
 			tempAccount.print();
 		}
+		
+		System.out.println("-----------------HashSet[Wrapper]---------------------");
+		HashSet<Integer> lottoSet =new HashSet<Integer>();
+		System.out.println("size: "+lottoSet.size());
+		
+		System.out.println("******************* add *********************");
+		lottoSet.add(34);
+		lottoSet.add(40);
+		lottoSet.add(5);
+		lottoSet.add(6);
+		System.out.println("size:"+lottoSet.size());
+		System.out.println(lottoSet);
+		isAdd=lottoSet.add(new Integer(40));
+		System.out.println("isAdd: "+isAdd);
+		System.out.println("size:"+lottoSet.size());
+		System.out.println(lottoSet);
+		
+		System.out.println("******************* remove *********************");
+		if(lottoSet.contains(40)) {
+			lottoSet.remove(40);
+			
+		}
+		
+		
+		System.out.println("******************* clear *********************");
+		lottoSet.clear();
+		System.out.println(lottoSet);
+		while(lottoSet.size()<6) {
+			lottoSet.add((int)(Math.random()*45)+1);
+		}
+		System.out.println();
+		
+		System.out.println("***************** 전체출력[Iteration] *********************");
+		Iterator<Integer> lottoIter=lottoSet.iterator();
+		while(lottoIter.hasNext()) {
+			int temNo=lottoIter.next();
+			System.out.println(temNo+" ");
+		}
+			
+		
+		System.out.println("-----------------HashSet[String]---------------------");
+		Set<String> nameSet =new HashSet<String>();
+		nameSet.add("kim");
+		nameSet.add("jim");
+		nameSet.add("gim");
+		nameSet.add("sim");
+		System.out.println("add: "+nameSet);
+		nameSet.add("kim");
+		System.out.println("add: "+nameSet);
+		if(nameSet.contains(new String("kim"))) {
+			System.out.println("kim문자열을가진 String객체가 존재..");
+			
+		}
+		
 		
 		
 		
