@@ -1,4 +1,3 @@
-//////15항부터 다시 보기 
 
 
 public class AbstractClassMain {
