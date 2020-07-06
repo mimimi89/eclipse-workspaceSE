@@ -1,8 +1,11 @@
+///
 public class AcademyMember {
 	
+	//멤버필드
 	public int no;
 	public String name;
 	
+	//생성자 메쏘드
 	public AcademyMember() {
 
 	}
@@ -13,10 +16,12 @@ public class AcademyMember {
 	
 	}
 	
+	//출력 메쏘드
 	public void print() {
 		System.out.print(no+"\t"+name+"\t");
 	}
 
+	//getter, setter 메쏘드
 	public int getNo() {
 		return no;
 	}

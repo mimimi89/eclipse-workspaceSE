@@ -1,9 +1,11 @@
+///
 public class AcademyStaff extends AcademyMember {
+	//AcademyMember를 상속받는 AcademyStaff 클래스
 	
-	
-	
+	//멤버필드(번호, 이름에 부서 추가)
 	public String depart;
 	
+	//생성자 메쏘드
 	public AcademyStaff() {
 		
 	}
