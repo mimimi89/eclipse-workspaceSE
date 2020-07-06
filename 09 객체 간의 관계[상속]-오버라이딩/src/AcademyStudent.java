@@ -1,6 +1,8 @@
+///
 public class AcademyStudent extends AcademyMember {
+	//AcademyMember를 상속받는 AcademyStudent 클래스
 	
-	
+	//멤버필드
 	public String ban;
 
 	public AcademyStudent(String ban) {
