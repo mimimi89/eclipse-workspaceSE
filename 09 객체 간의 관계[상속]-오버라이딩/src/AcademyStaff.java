@@ -15,6 +15,7 @@ public class AcademyStaff extends AcademyMember {
 		this.depart=depart;
 		
 	}
+	
 	//이전의 스태프 클래스 출력 메쏘드
 	/*
 	 public void staffPrint() {		//출력 메쏘드
@@ -23,6 +24,8 @@ public class AcademyStaff extends AcademyMember {
 		
 	}
 	 */
+	
+	//상속받은 출력 메쏘드를 재정의
 	@Override
 	public void print() {
 		super.print();
@@ -30,6 +33,7 @@ public class AcademyStaff extends AcademyMember {
 		
 	}
 	
+	//getter, setter 메쏘드
 	public String getDepart() {
 		return depart;
 	}

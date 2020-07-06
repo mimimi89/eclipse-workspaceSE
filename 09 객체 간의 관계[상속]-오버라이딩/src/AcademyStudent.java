@@ -22,6 +22,7 @@ public class AcademyStudent extends AcademyMember {
 		System.out.println(ban);		//반 출력
 	}
 	 */
+	
 	//상속받은 출력메쏘드를 재정의 
 	@Override
 	public void print() {
