@@ -1,5 +1,5 @@
 
-public class PrintUpperThread extends Thread{
+public class ControlPriorityUpperThread extends Thread{
 	//대문자를 찍는 쓰레드
 	
 	@Override

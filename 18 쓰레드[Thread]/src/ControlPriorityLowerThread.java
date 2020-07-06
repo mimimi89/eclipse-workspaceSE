@@ -1,5 +1,5 @@
 
-public class PrintLowerThread extends Thread{
+public class ControlPriorityLowerThread extends Thread{
 	//소문자를 찍는 쓰레드
 	
 	
