@@ -1,4 +1,4 @@
-package byte_string.node_string;
+package byte_stream.node_stream;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
