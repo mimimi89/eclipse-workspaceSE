@@ -22,10 +22,15 @@ public class FileInputStringMain {
 		readByte=fis.read();
 		System.out.println("2.byte: "+Integer.toBinaryString(readByte));
 		
+		while(true) {
+			readByte=fis.read();
+			if(readByte==-1)break;
+			//System.out.println(readByte); 		10진수
+			//System.out.println((char)readByte);	문자
+			System.out.println(Integer.toBinaryString(readByte));	//2진수
+		}
 		
 		fis.close();
-		
-		
 		
 		
 		
