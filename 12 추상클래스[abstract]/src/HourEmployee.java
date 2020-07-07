@@ -1,3 +1,4 @@
+///
 public class HourEmployee extends Employee {
 	
 	private int worksHour;		//번호, 이름, 급여에 일한 시간
@@ -29,7 +30,7 @@ public class HourEmployee extends Employee {
 	public void print() {
 		
 		super.print();		//번호, 이름, 급여(한달치) 출력
-		System.out.println(worksHour+"\t"+payPerHour); //일한 시간과 시급까지 출력
+		System.out.println("일한 시간: "+worksHour+"시간 \t"+"시급: "+payPerHour); //일한 시간과 시급까지 출력
 		
 		
 	}

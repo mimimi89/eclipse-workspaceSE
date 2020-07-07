@@ -1,21 +1,30 @@
-
+///
 public class EmployeeAbstractMain {
 
 	public static void main(String[] args) {
-		SalaryEmployee emp1=new SalaryEmployee(1, "kim", 30000000);	//1번, kim, 연봉 3000만원
+		System.out.println();
+		SalaryEmployee emp1=new SalaryEmployee(1, "kim", 30000000);	
+		//연봉 받는 근로자 객체 하나 생성
 		emp1.calculatePay();
-		//emp1.print();
-		HourEmployee emp2=new HourEmployee(2, "jim", 100, 20000);	//2번, jim, 일한시간 100시간, 시급 20000원
-		emp2.calculatePay();
-		//emp2.print();
+		//급여 계산 
+		emp1.print();
 		
-		//연봉 받는 근로자 객체 하나, 시급 받는 근로자 객체 하나 생성하고, 급여 계산
+		HourEmployee emp2=new HourEmployee(2, "jim", 100, 20000);
+		//시급 받는 근로자 객체 하나 생성
+		emp2.calculatePay();
+		//급여 계산
+		emp2.print();
+		System.out.println();
+	
 		
 		Employee e1=emp1;
-		Employee e2=emp2;	//배열 객체의 일원으로 포함시키기 위한 작업
+		Employee e2=emp2;	
+		//Employee class 추상클래스라서 객체 생성은 안 되지만 변수 선언은 가능
+		//배열 객체의 일원으로 포함시키기 위한 변수 선언 작업
 		
 		
-		Employee[] emps=new Employee[5];	//5명의 근로자가 하나의 배열 객체로 
+		Employee[] emps=new Employee[5];	
+		//5명의 근로자가 하나의 배열 객체로 
 		emps[0]=e1;
 		emps[1]=e2;
 		emps[2]=new SalaryEmployee(3, "dim", 35000000);

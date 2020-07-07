@@ -1,3 +1,4 @@
+///
 public class SalaryEmployee extends Employee {
 	
 	
@@ -25,7 +26,7 @@ public class SalaryEmployee extends Employee {
 	
 	public void print() {		// 출력 메쏘드
 		super.print();			//상속받은 출력 메쏘드 내용(번호, 이름, 급여(한달치))
-		System.out.println(annualSalary);	//위 내용에 연봉까지 출력
+		System.out.println("연봉: "+annualSalary);	//위 내용에 연봉까지 출력
 	}
 
 

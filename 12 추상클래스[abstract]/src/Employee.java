@@ -1,3 +1,4 @@
+///
 public abstract class Employee {	
     
 	
@@ -27,7 +28,7 @@ public abstract class Employee {
     
     
     public void print(){						//출력 메쏘드
-    	System.out.print(no+"\t"+name+"\t"+pay+"\t");
+    	System.out.print(no+"\t"+name+"\t"+"급여: "+pay+"원\t");
     	
     }
     

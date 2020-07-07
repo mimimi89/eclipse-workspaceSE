@@ -1,4 +1,4 @@
-
+///
 public class AcademyMemberCastingMain {
 
 	public static void main(String[] args) {
@@ -9,6 +9,10 @@ public class AcademyMemberCastingMain {
 		AcademyMember m5=new AcademyGangsa(5,"김중라", "오피스");
 		AcademyMember m6=new AcademyStaff(6,"정비사", "op");
 		AcademyMember m7=new AcademyStaff(7,"hong", "marketing");
+		/*
+		 * member class로 student\gangsa\staff 객체를 생성
+		 * 부모 클래스로 자식 객체를 생성 
+		 */
 		
 		System.out.println("-------------------------------------");
 		m1.print();
@@ -28,8 +32,9 @@ public class AcademyMemberCastingMain {
 		members[4]=m5;
 		members[5]=m6;
 		members[6]=m7;
-		System.out.println("---------AcademyMember print---------");
+		//7개의 객체를 담을 수 있는 배열 객체 생성
 		
+		System.out.println("---------AcademyMember print---------");
 		for (int i = 0; i < members.length; i++) {
 			members[i].print();
 		}

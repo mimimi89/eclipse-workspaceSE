@@ -1,3 +1,4 @@
+///
 public class AcademyGangsa extends AcademyMember {
 
 	public String subject;
