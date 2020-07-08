@@ -2,6 +2,10 @@ package shu.인터페이스.계산기;
 
 public interface Calc {
 	
+	default void description() {
+		System.out.println("정수 계산기를 구현합니다.");
+	}
+	
 	double PI=3.14;
 	int ERROR=-999999999;
 	
