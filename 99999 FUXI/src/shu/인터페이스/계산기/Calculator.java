@@ -1,4 +1,4 @@
-package shu.인터페이스;
+package shu.인터페이스.계산기;
 
 public abstract class Calculator implements Calc{
 

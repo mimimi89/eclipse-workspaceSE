@@ -8,28 +8,23 @@ import java.io.FileWriter;
 public class BufferedReaderWriterMain {
 
 	public static void main(String[] args) throws Exception{
-
+		
 		BufferedReader br=new BufferedReader(new FileReader("00.VariableDeclare.txt"));
 		BufferedWriter bw=new BufferedWriter(new FileWriter("00.VariableDeclare_LineNumber.txt"));
-		
 		int lineNo=0;
-
-		while(true) {
-			
-			String readLine=br.readLine();
-			if(readLine==null) break;
+		while (true) {
+			String readLine = br.readLine();
+			if(readLine==null)break;
 			lineNo++;
 			bw.write(lineNo+":"+readLine);
 			//bw.write("\n");
 			bw.newLine();
-			
-			bw.flush();
-			
-			System.out.println("-----BufferedReaderWriterMain Copy----");
-			
 		}
+		bw.flush();
+		bw.close();
+		System.out.println("----------BufferedReaderWriter Copy-------------");
 		
-		
+
 	}
 
 }
