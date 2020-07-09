@@ -28,6 +28,9 @@ public class PaintFrame extends JFrame {
 		@Override
 		public void paint(Graphics g) {
 			super.paint(g);
+			Image backImage=Toolkit.getDefaultToolkit().getImage("penguin_back.jpg");
+			g.drawImage(backImage, 0, 0, getWidth(), getHeight(), this);
+			
 			/*
 			 Subclasses of Component that override this method 
 			 need not call super.paint(g).
@@ -62,7 +65,9 @@ public class PaintFrame extends JFrame {
 			g.drawImage(image1, 20, 330, this);
 			g.drawImage(image2, 100, 330, this);
 			g.drawImage(image3, 180, 330, this);
-	
+			
+			
+			
 			
 		}
 		
