@@ -31,13 +31,18 @@ public class ActionEventJFrame extends JFrame{
 	 */
 	
 		private JButton northB;
+		private JButton southB;
 	
 		public ActionEventJFrame() {
 			
 			this.setTitle("ActionEvent");
 			this.getContentPane().setLayout(new BorderLayout());
-			northB=new JButton("이벤트쏘스[]");
-			this.getContentPane().add(northB, BorderLayout.SOUTH);
+			northB=new JButton("이벤트쏘스[north]");
+			southB=new JButton("이벤트쏘스[south]");
+			this.getContentPane().add(northB, BorderLayout.NORTH);
+			this.getContentPane().add(southB, BorderLayout.SOUTH);
+			
+			
 			//event 처리
 			northB.addActionListener(new SouthButtonActionEventHandler());
 			
@@ -58,7 +63,8 @@ public class ActionEventJFrame extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("event발생시 실행메쏘드 "+Thread.currentThread().getName());
+				System.out.println("event발생시 실행메쏘드 --> "+Thread.currentThread().getName());
+				System.out.println(e);
 				/*
 				 * 이벤트객체로부터 이벤트쏘스객체참조얻기
 				 */
