@@ -1,5 +1,6 @@
+//
 public class GajunTV implements GajunOnOff, GajunVolume {
-	//onoff, volume 두 개의 인터페이스를 가전 티비 클래스에서 구현 
+	//onoff, volume 두 개의 인터페이스를 GajunTV 클래스에서 구현 
 
     
     

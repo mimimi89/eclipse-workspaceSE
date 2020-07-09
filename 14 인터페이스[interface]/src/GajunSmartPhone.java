@@ -1,5 +1,6 @@
+//
 public class GajunSmartPhone implements GajunOnOff, GajunVolume {
-	//onoff, volume 두 개의 인터페이스를 가전 스마트폰 클래스에서 구현 
+	//onoff, volume 두 개의 인터페이스를 GajunSmartPhone 클래스에서 구현 
 	
 	@Override
 	public void turnOn() {
