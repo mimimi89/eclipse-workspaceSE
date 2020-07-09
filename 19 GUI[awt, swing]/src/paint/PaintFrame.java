@@ -1,6 +1,9 @@
 package paint;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
@@ -24,9 +27,43 @@ public class PaintFrame extends JFrame {
 		
 		@Override
 		public void paint(Graphics g) {
-			super.paintAll(g);
-			System.out.println("paint thread: "+Thread.currentThread().getName());
-			System.out.println("");
+			super.paint(g);
+			/*
+			 Subclasses of Component that override this method 
+			 need not call super.paint(g).
+			 */
+			//System.out.println("paint thread:"+Thread.currentThread().getName());
+			
+			/*
+			 * <<Graphics>>
+			 * 컴포넌트에 그릴 수 있는 펜 객체
+			 */
+			
+			//1. 문자
+			g.drawString("안녕, 페인트", 80, 50);
+			
+			//2. 라인, 사각형, 원
+			g.setColor(Color.BLUE);
+			g.drawLine(0, 80, this.getWidth(), 80);
+			
+			g.drawRect(20, 90, 50, 50);
+			g.setColor(Color.PINK);
+			g.fillRect(20, 150, 50, 50);
+			
+			g.drawOval(20, 210, 50, 50);
+			g.setColor(Color.RED);
+			g.fillOval(30, 220, 30, 30);
+			
+			//3. 이미지
+			Image image1=Toolkit.getDefaultToolkit().getImage("penguin1.gif");
+			Image image2=Toolkit.getDefaultToolkit().getImage("penguin2.gif");
+			Image image3=Toolkit.getDefaultToolkit().getImage("penguin3.gif");
+			
+			g.drawImage(image1, 20, 330, this);
+			g.drawImage(image2, 100, 330, this);
+			g.drawImage(image3, 180, 330, this);
+	
+			
 		}
 		
 		
@@ -42,20 +79,9 @@ public class PaintFrame extends JFrame {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		public static void main(String[] args) {
-		
+	
+			new PaintFrame();
 		
 		
 		
