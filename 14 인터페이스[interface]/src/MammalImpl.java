@@ -1,4 +1,4 @@
-
+///
 public class MammalImpl implements Mammal {
 
 	@Override

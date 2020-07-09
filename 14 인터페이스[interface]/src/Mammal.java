@@ -1,3 +1,4 @@
+///
 public interface Mammal extends Animal {
 	
 	
