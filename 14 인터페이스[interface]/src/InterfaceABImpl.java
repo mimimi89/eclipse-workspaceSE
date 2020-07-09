@@ -1,6 +1,8 @@
+///
 
 public class InterfaceABImpl extends Object implements InterfaceA, InterfaceB{
-	//InterfaceABImpl 클래스는 Object 클래스를 상속받고, InterfaceA와 InterfaceB를 구현한다.
+	//InterfaceABImpl 클래스는 Object 클래스를 상속받고, 
+	//InterfaceA와 InterfaceB를 구현한다.
 
 	@Override
 	public void method1() {

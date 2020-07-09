@@ -1,3 +1,4 @@
+///
 
 public interface InterfaceB {
 	public void method3();

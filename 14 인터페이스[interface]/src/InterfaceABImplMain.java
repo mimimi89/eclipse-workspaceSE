@@ -1,3 +1,4 @@
+///그다지??
 
 public class InterfaceABImplMain {
 
@@ -5,11 +6,14 @@ public class InterfaceABImplMain {
 		System.out.println("-----------------------InterfaceABImpl-----------------------");
 		
 		InterfaceABImpl abImpl=new InterfaceABImpl();
+		//InterfaceA, InterfaceB를 구현한 InterfaceABImpl class
+		//InterfaceABImpl로 생성한 abImpl 객체
 		
 		abImpl.method1();
 		abImpl.method2();
 		abImpl.method3();
 		abImpl.method4();
+		//참조변수+도트 연산자로 메쏘드 실행
 		
 		System.out.println("------------------------InterfaceA---------------------------");
 		
