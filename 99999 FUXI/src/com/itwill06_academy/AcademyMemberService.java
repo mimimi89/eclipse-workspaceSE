@@ -152,36 +152,28 @@ public class AcademyMemberService {
 		return staff;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public AcademyMember[] findAcademyGangsas() {
-		AcademyMember[] gangsas = null;
-		int cnt = 0;
+	//강사 찾기
+	public AcademyMember[] findAcademyGangsa() {
+		AcademyMember[] gangsa=null;
+		int countGs=0;
 		for (int i = 0; i < members.length; i++) {
-			if (members[i] instanceof AcademyGangsa) {
-				cnt++;
+			if(members[i] instanceof AcademyGangsa) {
+				countGs++;
+				
 			}
 		}
-		gangsas = new AcademyMember[cnt];
-		int index = 0;
-		for (int i = 0; i < members.length; i++) {
-			if (members[i] instanceof AcademyGangsa) {
-				gangsas[index] = members[i];
-				index++;
-			}
-		}
-		return gangsas;
+		
+		
 	}
-
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
 	public AcademyMember[] findAcademyMembersByType(int type) {
 		AcademyMember[] findMembers = null;
 		return findMembers;
