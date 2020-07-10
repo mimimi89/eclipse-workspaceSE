@@ -1,15 +1,6 @@
 package com.itwill06_service;
-
-
-/*
- * Account객체전체에관련된 업무를 실행할클래스
- * 		1.계좌객체들(Account[]) 을멤버변수로가진다.
- * 		2.계좌객체들을 사용해서 업무실행
- */
  
 public class AccountService {
-	
-	
 	
 	private Account[] accounts= {
 			new Account(1111, "KIM", 89000, 1.3),
@@ -24,8 +15,8 @@ public class AccountService {
 	};
 	
 	/*
-	  1.계좌데이타들  인자로받아서 Account[]에추가
-	  2.계좌객체를    인자로받아서 Account[]에추가
+	  1.계좌 데이타를  인자로받아서 Account[]에추가
+	  2.계좌 객체를    인자로받아서 Account[]에추가
 	*/
 	
 	public void addAccount(int no, String owner, int balance, double iyul) {
@@ -40,16 +31,10 @@ public class AccountService {
 		}
 		tempAccounts[tempAccounts.length-1] =newAccount;
 		this.accounts=tempAccounts;
-	}
-	
-		
+	}//배열 사이즈 늘리고 추가하는 과정 이해할 수 없음
 	
 	
-	
-	
-	
-	
-	
+
 	
 	
 	
