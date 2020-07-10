@@ -15,24 +15,21 @@ public class StudentService {
 			new Student(9,"QIM",73,90,80),
 			
 	};
-	/*
-	 *  0.전체학생출력
-	 */
+	
+	// 0.전체학생출력
 	public void print() {
 		Student.headerPrint();
 		for (int i = 0; i < students.length; i++) {
 			students[i].print();
 		}
 	}
-	/*
-	 * 0.학생객체받아서 추가
-	 */
+	
+	// 0.학생객체받아서 추가
 	public void addStudent(Student student) {
 		
 	}
-	/*
-	 * 1. 전체학생총점,평균,평점계산
-	 */
+	
+	// 1. 전체학생총점,평균,평점계산
 	public void calculate() {
 		for (int i = 0; i < students.length; i++) {
 			students[i].calculateTot();
@@ -40,15 +37,12 @@ public class StudentService {
 			students[i].calculateGrade();
 		}
 	}
-	/*
-	 * 2. 전체학생 총점으로 석차계산
-	 */
-	/*
-	 * 3. 전체학생반환
-	 */
-	/*
-	 * 4. 번호3번 학생한명 반환  
-	 */
+	
+	// 2. 전체학생 총점으로 석차계산
+	
+	// 3. 전체학생반환
+	
+	// 4. 번호3번 학생한명 반환  
 	public Student findByNo(int no) {
 		Student findStudent=null;
 		for (int i = 0; i < students.length; i++) {
@@ -59,16 +53,10 @@ public class StudentService {
 		}
 		return findStudent;
 	}
-	/*
-	 * 5. 학점A인 학생들 반환
-	 */
-	/*
-	 * 6. 학생총점으로 오름차순정렬
-	 */
-	/*
-	  7. 학생학점순으로 오름차순정렬
-	 */
-	/*
-	 8. 학생이름순으로 오름차순정렬
-	 */
+	
+	// 5. 학점A인 학생들 반환
+	// 6. 학생총점으로 오름차순정렬
+	// 7. 학생학점순으로 오름차순정렬
+	// 8. 학생이름순으로 오름차순정렬
+	
 }
