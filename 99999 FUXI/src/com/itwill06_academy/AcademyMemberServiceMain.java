@@ -36,41 +36,41 @@ public class AcademyMemberServiceMain {
 		AcademyMember[] student=
 				academyMemberService.findAcademyStudents();
 		System.out.println("---------------------------------------------");
-		
+			
 		
 		System.out.println("3-2.AcademyMember 중에서 AcademyStaff객체배열 참조변수반환해줘");
 		AcademyMember[] staff=
 				academyMemberService.findAcademyStaff();
 		System.out.println("---------------------------------------------");
 		
-		System.out.println("3.AcademyMember 중에서 AcademyGangsa객체배열 참조변수반환해줘");
+		
+		System.out.println("3-3.AcademyMember 중에서 AcademyGangsa객체배열 참조변수반환해줘");
+		AcademyMember[] gangsa=
+				academyMemberService.findAcademyGangsa();
+		System.out.println("---------------------------------------------");
 
 		
 		System.out.println(
-		"4.AcademyMember 중에서 자바반인  AcademyStudent객체들 배열참조변수반환해줘");
-		
+				"4-1.AcademyMember 중에서 자바반인 AcademyStudent객체들배열 참조변수반환해줘");
+		AcademyMember[] javaStudent=
+				academyMemberService.findAcademyJavaStudents();
+		System.out.println("---------------------------------------------");
+
 		
 		System.out.println(
-		"4.AcademyMember 중에서 영업부서인 AcademyStaff  객체들 배열참조변수반환해줘");
-		
-		
-		System.out.println(
-		"4.AcademyMember 중에서 자바과목인 AcademyGangsa 객체들 배열참조변수반환해줘");
-		
-		
+				"4-2.AcademyMember 중에서 영업부서인 AcademyStaff 객체들배열 참조변수반환해줘");
+		AcademyMember[] salesStaff=
+				academyMemberService.findAcademySalesStaff();
 		System.out.println("---------------------------------------------");
 		
 		
 		System.out.println(
-		"5.AcademyMember 중에서 자바반인  AcademyStudent객체들 배열참조변수반환해줘");
+				"4-3.AcademyMember 중에서 프로그래밍 과목인 AcademyGangsa 객체들 배열참조변수반환해줘");
+		AcademyMember[] programingGangsa=
+				academyMemberService.findAcademyProgramingGangsa();
+		System.out.println("---------------------------------------------");
 		
 		
-		System.out.println(	
-	    "5.AcademyMember 중에서 영업부서인 AcademyStaff  객체들 배열참조변수반환해줘");
-		
-		
-		System.out.println(
-		"5.AcademyMember 중에서 자바과목인 AcademyGangsa 객체들 배열참조변수반환해줘");
 		
 		
 	}

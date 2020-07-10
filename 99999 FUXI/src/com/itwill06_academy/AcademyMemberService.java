@@ -163,142 +163,105 @@ public class AcademyMemberService {
 			}
 		}
 		
+		gangsa=new AcademyGangsa[countGs];
+		
+		int index=0;
+		for (int i = 0; i < members.length; i++) {
+			if(members[i] instanceof AcademyGangsa) {
+				gangsa[index]=members[i];
+				members[i].print();
+				index++;
+			}
+		}
+		return gangsa;
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	public AcademyMember[] findAcademyMembersByType(int type) {
-		AcademyMember[] findMembers = null;
-		return findMembers;
-	}
-
-
-	/*
-	 * 자바반 학생들 찾아서 반환해줘 리눅스과목 강사들 찾아서 반환해줘 영업부서 스텝들 찾아서 반환해줘
-	 */
-
-	public AcademyMember[] findByAcademyMembers(int type) {
-		AcademyMember[] findMembers=null;
-		int cnt=0, index = 0;		
-		switch (type) {
-		case AcademyMember.GANGSA_TYPE:
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyGangsa) {
-					cnt++;
-				}
+	// 4. AcademyMember 중에서 자바반인 AcademyStudent객체들
+	// 자바반 학생 찾기
+	public AcademyMember[] findAcademyJavaStudents() {
+		AcademyMember[] javaStudent=null;
+		//학생으로 이루어진 배열 객체 초기화
+		int countStu=0;
+		//학생의 수 0으로 초기화
+		for (int i = 0; i < members.length; i++) {
+			if(members[i] instanceof AcademyStudent) {
+				countStu++;
 			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyGangsa) {
-					findMembers[index] = members[i];
-					index++;				
-				}
-			}
-			break;
-		case AcademyMember.STUDENT_TYPE:
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyStudent) {
-					cnt++;
-				}
-			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyStudent) {
-					findMembers[index] = members[i];
-					index++;				
-				}
-			}
-			break;
-		case AcademyMember.STAFF_TYPE:
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyStaff) {
-					cnt++;
-				}
-			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < members.length; i++) {
-				if (members[i] instanceof AcademyStaff) {
-					findMembers[index] = members[i];
-					index++;				
-				}
-			}
-			break;
 		}
-	return findMembers;
+		
+		javaStudent=new AcademyStudent[countStu];
+		
+		int index = 0;
+		for (int i = 0; i < members.length; i++) {
+			if (members[i] instanceof AcademyStudent) {
+				AcademyStudent tempStudent=(AcademyStudent)members[i];
+				String ban=tempStudent.getBan();
+				if(ban=="자바") {
+					javaStudent[index] = members[i];
+					members[i].print();
+				}
+				index++;
+			}
+		}
+		return javaStudent;
 	}
-
-	public AcademyMember[] findByAcademyMembersDetail(int type, String Detail) {
-		AcademyMember[] findMembers = null;
-		int cnt=0, index = 0;		
-		switch (type) {
-		case AcademyMember.GANGSA_TYPE:
-			findMembers = this.findAcademyGangsas();
-			AcademyGangsa[] findGangsas = new AcademyGangsa[this.findAcademyGangsas().length];  
-			for (int i = 0; i < this.findAcademyGangsas().length; i++) {
-				findGangsas[i] = (AcademyGangsa)findMembers[i];
+	
+	// 영업부서 직원 찾기
+		public AcademyMember[] findAcademySalesStaff() {
+			AcademyMember[] salesStaff=null;
+			int countStf=0;
+			for (int i = 0; i < members.length; i++) {
+				if(members[i] instanceof AcademyStaff) {
+					countStf++;
+				}
 			}
 			
-			for (int i = 0; i < this.findAcademyGangsas().length; i++) {
-				if (findGangsas[i].getSubject() == Detail) {
-					cnt++;
+			salesStaff=new AcademyStaff[countStf];
+			
+			int index = 0;
+			for (int i = 0; i < members.length; i++) {
+				if (members[i] instanceof AcademyStaff) {
+					AcademyStaff tempStaff=(AcademyStaff)members[i];
+					String depart=tempStaff.getDepart();
+					if(depart=="영업") {
+						salesStaff[index] = members[i];
+						members[i].print();
+					}
+					index++;
 				}
 			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < this.findAcademyGangsas().length; i++) {
-				if (findGangsas[i].getSubject() == Detail) {
-					findMembers[index] = findGangsas[i];
-					index++;				
-				}
-			}
-			break;
-		case AcademyMember.STUDENT_TYPE:
-			findMembers = this.findAcademyStudents();
-			AcademyStudent[] findStudents = new AcademyStudent[this.findAcademyStudents().length];
-			for (int i = 0; i < this.findAcademyStudents().length; i++) {
-				findStudents[i] = (AcademyStudent)findMembers[i];
-			}
-			for (int i = 0; i < this.findAcademyStudents().length; i++) {
-				if (findStudents[i].getBan() == Detail) {
-					cnt++;
-				}
-			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < this.findAcademyStudents().length; i++) {
-				if (findStudents[i].getBan() == Detail) {
-					findMembers[index] = findStudents[i];
-					index++;				
-				}
-			}
-			break;
-		case AcademyMember.STAFF_TYPE:
-			findMembers = this.findAcademyStaffs();
-			AcademyStaff[] findStaffs = new AcademyStaff[this.findAcademyStaffs().length];
-			for (int i = 0; i < this.findAcademyStaffs().length; i++) {
-				findStaffs[i] = (AcademyStaff)findMembers[i];
-			}
-			for (int i = 0; i < this.findAcademyStaffs().length; i++) {
-				if (findStaffs[i].getDepart() == Detail) {
-					cnt++;
-				}
-			}
-			findMembers = new AcademyMember[cnt];
-			for (int i = 0; i < this.findAcademyStaffs().length; i++) {
-				if (findStaffs[i].getDepart() == Detail) {
-					findMembers[index] = findStaffs[i];
-					index++;				
-				}
-			}
-			break;
+			return salesStaff;
 		}
-	return findMembers;
-	}
+		
+		// 프로그래밍 강사 찾기
+		public AcademyMember[] findAcademyProgramingGangsa() {
+			AcademyMember[] programingGangsa=null;
+			int countGs=0;
+			for (int i = 0; i < members.length; i++) {
+				if(members[i] instanceof AcademyGangsa) {
+					countGs++;
+				}
+			}
+			
+			programingGangsa=new AcademyGangsa[countGs];
+			
+			int index = 0;
+			for (int i = 0; i < members.length; i++) {
+				if (members[i] instanceof AcademyGangsa) {
+					AcademyGangsa tempGangsa=(AcademyGangsa)members[i];
+					String subject=tempGangsa.getSubject();
+					if(subject=="프로그래밍") {
+						programingGangsa[index] = members[i];
+						members[i].print();
+					}
+					index++;
+				}
+			}
+			return programingGangsa;
+		}
+	
+	
 	
 
 }
