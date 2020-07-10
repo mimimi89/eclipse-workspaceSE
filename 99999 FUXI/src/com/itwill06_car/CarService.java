@@ -5,11 +5,10 @@ public class CarService {
 	//car 배열 타입의 객체 cararray
 	
 	//생성자 메쏘드
-	//30개의 car를 담을 수 있는 cararry  
 	public CarService() {
 		carArray=new Car[30];
 	}
-	//int count를 인자로 하는 생성자 메쏘드
+	
 	public CarService(int count) {
 		carArray=new Car[count];
 	}
