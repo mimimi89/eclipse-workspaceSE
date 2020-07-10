@@ -1,8 +1,8 @@
 package com.itwill06_car;
 
 public class CarService {
+	
 	private Car[] carArray;
-	//car 배열 타입의 객체 cararray
 	
 	//생성자 메쏘드
 	public CarService() {

@@ -10,18 +10,57 @@ public class AccountServiceMain {
 	public static void main(String[] args) {
 		
 		AccountService accountService=new AccountService();
-		System.out.println("0.AccountService야 은행계좌추가해줘");
-		Account addAccount=new Account(1000, "고소영",89000, 0.5);
-		accountService.addAccount(addAccount);
 		
-		System.out.println("1.AccountService야 은행계좌들 총계좌수반환해줘");
+		System.out.println("0.AccountService야 은행계좌추가해줘");
+		
+		Account addAccount1=new Account(1000, "고소영",89000, 0.5);
+		boolean isAdd=accountService.addAccount(addAccount1);
+		if(isAdd) {
+			JOptionPane.showMessageDialog(null, "계좌 추가 성공!!!");
+		}else {
+			JOptionPane.showMessageDialog(null, "계좌 추가 실패!!!");
+		}
+		
+		Account addAccount2=new Account(1000, "고소일",67000, 0.1);
+		isAdd=accountService.addAccount(addAccount2);
+		if(isAdd) {
+			JOptionPane.showMessageDialog(null, "계좌 추가 성공!!!");
+		}else {
+			JOptionPane.showMessageDialog(null, "계좌 추가 실패!!!");
+		}
+		System.out.println();
+		System.out.println("----------------------------------------");
+		
+		System.out.println("1.AccountService야 은행계좌들 총계좌수 반환해줘");
 		int accountCount = accountService.totAccountNumber();
 		System.out.println("총계좌수[main]:"+accountCount);
-		System.out.println("2.AccountService야 은행계좌들 전체출력해줘");
-		accountService.print();
+		System.out.println();
+		System.out.println("----------------------------------------");
+		
+		System.out.println("2.AccountService야 은행계좌들 전체 반환해줘");
+		ArrayList<Account> accountList=accountService.getAccountList();
+		System.out.println(accountList);
+		System.out.println();
+		System.out.println("----------------------------------------");
+				
+		
+		
+		
+		
+		
+		
+		
+		/*
+		
 		System.out.println("3.AccountService야 은행계좌들 총잔고 반환해줘");
 		int totBalance = accountService.totBalance();
 		System.out.println("총잔고[main]:"+totBalance);
+		System.out.println();
+		System.out.println("----------------------------------------");
+		
+		
+		
+		
 		System.out.println("4.AccountService야 계좌번호줄께 계좌한개반환해줘");
 		Account findAccount = accountService.findByNo(5555);
 		System.out.println("계좌한개[main]");
@@ -42,9 +81,7 @@ public class AccountServiceMain {
 			System.out.println(e.getMessage());
 			//JOptionPane.showMessageDialog(null,e.getMessage() ,"에러", 1);
 		}
-		/*
-		 8.6666번계좌 4000원 입금해줘
-		*/
+		//6666번계좌 4000원 입금해줘
 		System.out.println(" 8.6666번계좌 4000원 입금해줘");
 		System.out.println(accountService.findByNo(6666));
 		accountService.ipGum(6666, 4000);
@@ -71,6 +108,7 @@ public class AccountServiceMain {
 		
 		System.out.println("-----------전체계좌 출력-------------");		
 		accountService.print();
+		*/
 		
 	}
 
