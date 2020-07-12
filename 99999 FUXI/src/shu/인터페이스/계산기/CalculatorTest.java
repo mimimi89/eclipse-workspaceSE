@@ -20,7 +20,7 @@ public class CalculatorTest {
 		calc.description();
 		
 		int[] arr= {1, 2, 3, 4, 5};
-		System.out.println(calc.total(arr));
+		System.out.println(Calc.total(arr));
 	
 
 	}

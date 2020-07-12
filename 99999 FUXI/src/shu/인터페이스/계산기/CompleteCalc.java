@@ -2,14 +2,13 @@ package shu.인터페이스.계산기;
 
 public class CompleteCalc extends Calculator{
 	
-
 	static int total(int[] arr) {
 		int total=0;
+		
 		for(int i:arr) {
-			total+=i;
+			total +=i;
 		}
 		return total;
-		
 	}
 	
 	@Override
