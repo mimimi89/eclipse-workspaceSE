@@ -13,8 +13,38 @@ public class AccountService {
 	
 	private AccountDao accountDao;
 
-	public AccountService() {
+	public AccountService() throws Exception {
 		accountDao=new AccountDao();
+		
+	}
+	
+	/*
+	 * 계좌생성
+	 */
+	public boolean addAccount(Account account) throws Exception {
+		boolean isAdd=accountDao.create(account);
+		return isAdd;
+		
+	}
+	
+	
+	/*
+	 * 계좌 전체 검색(후 반환, 출력하지 않음)
+	 */
+	
+	public ArrayList<Account> findByAll() throws Exception {
+		
+		ArrayList<Account> accountList=accountDao.readAll();
+		return accountList;
+	}
+	
+	/*
+	 * 계좌 번호로 (한 개) 검색(후 반환, 출력하지 않음)
+	 */
+	public Account findAccountByNo(int no) throws Exception {
+		Account account=accountDao.readOne(no);
+		return account;
+		
 		
 	}
 	

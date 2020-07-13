@@ -1,7 +1,4 @@
 package com.itwill.account;
-
-import java.util.ArrayList;
-
 /*
 Dao(Data Access Object)
  - 계좌객체들의 데이터를 저장하고있는 파일(테이블)에
@@ -12,59 +9,116 @@ Dao(Data Access Object)
    Data Access(File, DB)에 관련된 단위기능(CRUD)을
    수행하는 객체
  */
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
 public class AccountDao {
 	
 	/*
-	 * Account 데이타 소스(파일, 테이블, 메모리)
+	 * Account데이타소스(메모리,파일,테이블)
 	 */
-	
-	private ArrayList<Account> accounts;
-
-	public AccountDao() {
-		accounts=new ArrayList<Account>();
-		//생성자에서 초기화 작업
-		accounts.add(new Account(1111, "KIM", 89000, 1.3));
-		accounts.add(new Account(2222, "AIM", 45000, 2.7));
-		accounts.add(new Account(3333, "FIM", 23000, 4.7));
-		accounts.add(new Account(4444, "XIM", 34000, 6.7));
-		accounts.add(new Account(5555, "HIM", 78000, 3.7));
-		accounts.add(new Account(6666, "AIM", 99000, 5.7));
-		accounts.add(new Account(7777, "PIM", 89000, 4.7));
-		accounts.add(new Account(8888, "QIM", 91000, 1.7));
-		accounts.add(new Account(9999, "MIM", 12000, 0.7));
-		
+	private File accountsFile;
+	public AccountDao() throws Exception{
+		accountsFile=new File("accounts.ser");
+		if(!accountsFile.exists()) {
+			System.out.println("파일생성[accounts.ser]");
+			ObjectOutputStream oos
+				=new ObjectOutputStream(new FileOutputStream(accountsFile));
+			oos.writeObject(new ArrayList<Account>());
+		}
 	}
-	
+	/**********************************************/
+	private ArrayList<Account> readFile() throws Exception{
+		ObjectInputStream ois=
+				new ObjectInputStream(
+						new FileInputStream(accountsFile));
+		ArrayList<Account> accountList=(ArrayList<Account>)ois.readObject();
+		ois.close();
+		return accountList;
+	}
+	private void writeFile(ArrayList<Account> accountList) throws Exception{
+		ObjectOutputStream oos=
+				new ObjectOutputStream(
+						new FileOutputStream(accountsFile));
+		oos.writeObject(accountList);
+		oos.close();
+	}
+	/**********************************************/
 	/*
 	 * Create
 	 */
-	
-	
-	
-	/*
-	 * ReadOne * 
-	 * ReadMany *
-	 */
-	public void readAll() {
+	public boolean create(Account account) throws Exception{
+		if(!this.isDuplicateNo(account.getNo())) {
+			ArrayList<Account> accountList=this.readFile();
+			accountList.add(account);
+			this.writeFile(accountList);
+			return true;
+		}else {
+			return false;
+		}
+		
 		
 	}
 	
-	
+	private boolean isDuplicateNo(int no) throws Exception{
+		boolean isDuplicate=false;
+		ArrayList<Account> accountList = this.readFile();
+		for (Account account : accountList) {
+			if(account.getNo()==no) {
+				isDuplicate=true;
+				break;
+			}
+		}
+		return isDuplicate;
+	}
+	/*
+	 * ReadOne
+	 * ReadAll
+	 */
+	public Account readOne(int no) throws Exception {
+		ArrayList<Account> accountList = this.readFile();
+		Account findAccount=null;
+		for (Account account : accountList) {
+			if(account.getNo()==no) {
+				findAccount=account;
+			}
+		}
+		return findAccount;
+	}
+	public ArrayList<Account> readAll() throws Exception{
+		ArrayList<Account> accountList = this.readFile();
+		return accountList;
+	}
 	/*
 	 * Update
 	 */
-	
-	
-	
+	public void update() {
+		
+	}
 	/*
 	 * Delete
 	 */
-	
-	
-	
-	
-
-	
-
+	public void delete() {
+		
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
