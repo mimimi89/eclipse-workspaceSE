@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import com.itwill.account.Account;
 
-public class Account객체파일저장Main {
+public class 객체파일저장Main {
 
 	public static void main(String[] args) throws Exception {
 		

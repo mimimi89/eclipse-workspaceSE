@@ -1,4 +1,5 @@
-import java.io.IOException;
+import java.io.IOException;	
+//입출력 예외
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.sql.DriverManager;

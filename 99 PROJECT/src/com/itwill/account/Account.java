@@ -3,12 +3,14 @@ package com.itwill.account;
 import java.io.Serializable;
 
 /*
- * 은행계좌객체를 추상화한클래스
+은행계좌객체를 추상화한클래스
+VO(Value Object),DTO(Data Transfer Object)
+ 	- 계좌관리를 위하여 필요한 도메인클래스(VO,DTO)
+  	- 계좌객체 한개의 데이타를가지고있다.(VO)
+  	- 계좌객체 한개의 데이타를 저장하기위한멤버변수를 가지고있다
  */
-public class Account implements Serializable {
-	/*
-	 * 속성(멤버변수)
-	 */
+public class Account implements Serializable{
+
 	private int no;//계좌번호
 	private String owner;//계좌주
 	private int balance;//잔고
@@ -27,13 +29,6 @@ public class Account implements Serializable {
 	}
 
 
-	/*
-	 * 행위(멤버메쏘드)
-	 * 
-	 * 입금
-	 * 출금
-	 * 계좌정보출력
-	 */
 	public void setAccountData(int no,String owner,int balance,double iyul) {
 		this.no=no;
 		this.owner=owner;
@@ -44,12 +39,7 @@ public class Account implements Serializable {
 	public void deposit(int m) {
 		this.balance = this.balance + m;
 	}
-	public void withdraw(int m) throws InsufficientBalanceException{
-		if(this.balance-m < 0) {
-			throw new InsufficientBalanceException(this.owner+" 님 잔고가 부족합니다.");
-			
-		}
-		
+	public void withdraw(int m){
 		this.balance=this.balance-m;
 		return;
 	}
@@ -83,6 +73,8 @@ public class Account implements Serializable {
 		System.out.println(
 				this.no+"\t"+this.owner+"\t"+this.balance+"\t"+this.iyul);
 	}
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
@@ -93,11 +85,9 @@ public class Account implements Serializable {
 		// TODO Auto-generated method stub
 		return this.no+"\t"+this.owner+"\t"+this.balance+"\t"+this.iyul;
 	}
+
+
 	
-	//getter,setter
-	/*
-	 * alt + shift + s
-	 */
 	public int getNo() {
 		return no;
 	}

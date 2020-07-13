@@ -32,7 +32,7 @@
 			 }catch(Exception클래스 e){
 			 	익셉션 발생예상코드에서 Exception이발생하면
 			 	실행하게될코드;
-			 }
+			 } 
 		 }
 		 ex2> 던진다.
 		 
