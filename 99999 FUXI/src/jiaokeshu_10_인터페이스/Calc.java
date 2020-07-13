@@ -1,4 +1,4 @@
-package shu.인터페이스.계산기;
+package jiaokeshu_10_인터페이스;
 
 public interface Calc {
 	

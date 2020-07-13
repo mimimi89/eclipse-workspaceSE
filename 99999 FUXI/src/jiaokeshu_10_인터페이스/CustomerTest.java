@@ -1,4 +1,4 @@
-package shu.인터페이스.고객구매판매;
+package jiaokeshu_10_인터페이스;
 
 public class CustomerTest {
 

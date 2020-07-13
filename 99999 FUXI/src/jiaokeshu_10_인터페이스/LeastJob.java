@@ -1,4 +1,4 @@
-package shu.인터페이스.고객상담전화;
+package jiaokeshu_10_인터페이스;
 
 public class LeastJob implements Scheduler {
 
