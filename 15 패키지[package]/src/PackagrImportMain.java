@@ -1,3 +1,4 @@
+///
 import com.itwill.shop.ShopService;
 import com.itwill.shop.member.Member;
 import com.itwill.shop.member.MemberService;
@@ -14,14 +15,18 @@ public class PackagrImportMain {
 
 		Member m1=new Member();
 		System.out.println(m1);
+		
 		MemberService memberService=new MemberService();
 		System.out.println(memberService);
 		
-		com.itwill.shop.admin.Member am1=new com.itwill.shop.admin.Member();
+		com.itwill.shop.admin.Member am1=
+				new com.itwill.shop.admin.Member();
 		System.out.println(am1);
+		
 		Order order=new Order();
 		//ctrl+shift+o 자동 import 가능
 		System.out.println(order);
+		
 		ShopService shopService=new ShopService();
 		System.out.println(shopService);
 		

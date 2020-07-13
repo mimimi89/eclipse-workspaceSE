@@ -1,8 +1,9 @@
+///
 package korea.president;
 
 import america.president.Trump;
 
-public class Ys {
+public class Ys  {
 	
 	public int a; 		
 	protected int b;	
@@ -31,6 +32,8 @@ public class Ys {
 	public void access() {
 		
 		/************ Ys와 같은 패키지 ***************/
+		//import 할 필요 없이 public, protected, package는 사용 가능
+		//private은 사용 불가
 		Dj dj=new Dj();
 		dj.a=1;
 		dj.b=2;
@@ -44,9 +47,12 @@ public class Ys {
 		//dj.method4();
 		
 		
+		
+		/************ Ys와 다른 패키지 ***************/
 		Trump trump=new Trump();
 		trump.a=1;
 		//The field Trump.b is not visible
+		//***틀의 상속이기 때문에 이미 생성된 객체와는 아무런 상관관계가 없음***
 		//trump.b=2;
 		//trump.c=3;
 		//trump.d=4;
@@ -55,8 +61,6 @@ public class Ys {
 		//trump.method2();
 		//trump.method3();
 		//trump.method4();
-		
-		/************ Ys와 다른 패키지 ***************/
 		
 		
 		
