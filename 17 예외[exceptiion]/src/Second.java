@@ -1,3 +1,4 @@
+///
 import java.io.IOException;
 import java.net.Socket;
 
@@ -23,7 +24,8 @@ public class Second {
 		*/
 		boolean b=true;
 		if(b) {
-			NullPointerException exception=new NullPointerException("널애로사항발생");
+			NullPointerException exception=
+					new NullPointerException("널애로사항발생");
 			throw exception;
 			
 		}
