@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 
 public class AccountService {
+	
 	private AccountDao accountDao;
 
 	public AccountService() {
@@ -17,10 +18,6 @@ public class AccountService {
 		
 	}
 	
-	public void a() {
-		System.out.println("AccountService.a()");
-		
-	}
 		
 	
 	

@@ -42,16 +42,6 @@ public class AccountServiceFrameMain extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
-		JButton btnNewButton = new JButton("a method 실행");
-		//
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				accountService.a();
-			}
-		});
-		//
-		contentPane.add(btnNewButton, BorderLayout.CENTER);
 		accountService=new AccountService();
 		
 	}
