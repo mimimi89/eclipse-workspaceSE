@@ -23,6 +23,10 @@ class Student{
 		return false;
 		//거짓(인자로 들어온 객체가 Student 클래스로 생성한 것이 아니면)이면 false 반환
 	}
+	
+	
+	
+	
 }
 
 public class EqualsText {
@@ -47,8 +51,18 @@ public class EqualsText {
 		//두 객체의 주소값 비교 --> false
 		System.out.println(st1.equals(st2));
 		//같은 내용을 가지고 있는지 비교하기 위해서는 오버라이딩이 필요
-		//
+		//equals 재정의할 때, hashcode 반드시 같이 재정의
 		
+		System.out.println(st1.hashCode());
+		System.out.println(st2.hashCode());
+		
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
+		//재정의 되어 있기 때문에 같은 값이 나옴
+		//원래 값을 알고 싶으면 system.identityhashcode() 사용
+		
+		System.out.println(System.identityHashCode(str1));
+		System.out.println(System.identityHashCode(str2));
 		
 		
 		

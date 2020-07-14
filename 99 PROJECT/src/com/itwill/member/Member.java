@@ -1,6 +1,8 @@
 package com.itwill.member;
 
-public class Member {
+import java.io.Serializable;
+
+public class Member implements Serializable {
 	/*
 	 * 중복되지 않아야 하는 필드
 	 */
@@ -101,7 +103,7 @@ public class Member {
 	@Override
 	public String toString() {
 		return "Member [id=" + id + ", password=" + password + ", name=" + name + ", address=" + address + ", age="
-				+ age + ", married=" + married + "]";
+				+ age + ", married=" + married +"]"+"\n";
 	}
 	
 	
