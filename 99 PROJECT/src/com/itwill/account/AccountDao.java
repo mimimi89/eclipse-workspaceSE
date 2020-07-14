@@ -9,14 +9,12 @@ Dao(Data Access Object)
    Data Access(File, DB)에 관련된 단위기능(CRUD)을
    수행하는 객체
  */
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-
 public class AccountDao {
 	
 	/*
@@ -64,7 +62,6 @@ public class AccountDao {
 		
 		
 	}
-	
 	private boolean isDuplicateNo(int no) throws Exception{
 		boolean isDuplicate=false;
 		ArrayList<Account> accountList = this.readFile();
@@ -97,17 +94,80 @@ public class AccountDao {
 	/*
 	 * Update
 	 */
-	public void update() {
+	/*
+	public void update(Account updateAccount) throws Exception {
+		ArrayList<Account> accountList=this.readFile();
+		for (Account account : accountList) {
+			if(account.getNo()==updateAccount.getNo()) {
+				account.setOwner(updateAccount.getOwner());
+				account.setBalance(updateAccount.getBalance());
+				account.setIyul(updateAccount.getIyul());
+				break;
+			}
+			
+		}
 		
 	}
-	/*
-	 * Delete
 	 */
-	public void delete() {
+	
+	public void update(Account updateAccount) throws Exception {
+		ArrayList<Account> accountList=this.readFile();
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getNo()==updateAccount.getNo()) {
+				accountList.set(i, updateAccount);
+				break;
+			}
+			
+		}
+		this.writeFile(accountList);//저장작업
+	}
+	
+	/*
+	 * 객체지향스럽지 않음, 오버로딩
+	 */
+	
+	public void update(int no, String owner, int balance,double iyul) throws Exception {
+		ArrayList<Account> accountList=this.readFile();
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getNo()==no) {
+				accountList.get(i).setOwner(owner);
+				accountList.get(i).setBalance(balance);
+				accountList.get(i).setIyul(iyul);
+			
+			}
+			
+		}
+		this.writeFile(accountList);//저장작업
 		
 	}
 	
+	/*
+	 * Delete
+	 */
+	public void delete(int no) throws Exception {
+		ArrayList<Account> accountList=this.readFile();
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getNo()==no) {
+				accountList.remove(i);
+				break;
+			}
+			
+		}
+		this.writeFile(accountList);//저장작업
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 }
+
+
+
 
 
 

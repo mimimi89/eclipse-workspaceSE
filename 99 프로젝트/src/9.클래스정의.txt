@@ -1,0 +1,30 @@
+1.파일(테이블)설계
+2.프로젝트,패키지생성(이클립스)
+	1.프로젝트생성(프로젝트이름선정) ex> pos 
+	2.패키지생성
+		com.itwill.pos.member
+                com.itwill.pos.product  
+
+3.클래스설계(Dao,Manager)[팀장]
+  3-1.XXXDao.java 파일생성(파일의이름..)
+  3-2.XXXManager.java 파일생성
+  3-3.UI 파일(??)
+
+   ex> com.itwill.pos.member 안에 자바파일생성
+		Member.java
+		MemberDao.java
+                MemberManager.java
+       com.itwill.pos.product 안에 자바파일생성 
+                Product.java
+		ProductDao.java
+		ProductManager.java
+       com.itwill.pos.ui
+                PosMainFrame.java
+                PosLoginPanel.java
+
+4.Dao 클래스작성 단위메쏘드(CRUD)구현[팀원] -반드시테스트해야합니다
+5.Manager 클래스작성(단위업무주석기술)[팀원]-반드시테스트되어야합니다
+  
+
+ 
+
