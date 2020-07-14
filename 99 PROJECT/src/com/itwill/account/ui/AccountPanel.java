@@ -72,47 +72,51 @@ public class AccountPanel extends JPanel {
 		addP.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("번호");
-		lblNewLabel_1.setBounds(125, 39, 57, 15);
+		lblNewLabel_1.setBounds(85, 28, 57, 15);
 		addP.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("이름");
-		lblNewLabel_2.setBounds(125, 79, 57, 15);
+		lblNewLabel_2.setBounds(85, 68, 57, 15);
 		addP.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("잔고");
-		lblNewLabel_3.setBounds(125, 119, 57, 15);
+		lblNewLabel_3.setBounds(85, 108, 57, 15);
 		addP.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("이율");
-		lblNewLabel_4.setBounds(125, 159, 57, 15);
+		lblNewLabel_4.setBounds(85, 148, 57, 15);
 		addP.add(lblNewLabel_4);
 		
 		textField = new JTextField();
-		textField.setBounds(215, 36, 116, 21);
+		textField.setBounds(175, 25, 116, 21);
 		addP.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(215, 76, 116, 21);
+		textField_1.setBounds(175, 65, 116, 21);
 		addP.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(215, 116, 116, 21);
+		textField_2.setBounds(175, 105, 116, 21);
 		addP.add(textField_2);
 		textField_2.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8"}));
-		comboBox.setBounds(215, 156, 116, 21);
+		comboBox.setBounds(175, 145, 116, 21);
 		addP.add(comboBox);
 		
 		JButton btnNewButton_4 = new JButton("추가");
-		btnNewButton_4.setBounds(110, 205, 97, 23);
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_4.setBounds(65, 186, 97, 23);
 		addP.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("취소");
-		btnNewButton_5.setBounds(250, 205, 97, 23);
+		btnNewButton_5.setBounds(205, 186, 97, 23);
 		addP.add(btnNewButton_5);
 		
 		JPanel listP = new JPanel();
@@ -133,7 +137,17 @@ public class AccountPanel extends JPanel {
 		accountTP.addTab("입금", null, depositP, null);
 		depositP.setLayout(null);
 		
-		accountTP.setSelectedIndex(3);
+		accountTP.setSelectedIndex(0);
 
 	}
+	/********************계좌추가*************************/
+	public void addAccount() {
+		
+	}
+	
+	/********************계좌리스트***********************/
+	public void accountList() {
+		
+	}
+	
 }
