@@ -40,24 +40,66 @@ public class MemberDao {
 	/*
 	 * create
 	 */
-	public void create(Member addMember) {
-		
+	public boolean create(Member addMember) throws Exception{
+		boolean isSuccess=false;
+		ArrayList<Member> memberList=this.readFile();
+		if(isDuplicateId(addMember.getId())) {
+			isSuccess=false;
+			return isSuccess;
+			
+		}
+		isSuccess=true;
+		memberList.add(addMember);
+		this.writeFile(memberList);
+		return isSuccess;
 	}
+	
+	public boolean isDuplicateId(String id) throws Exception {
+		boolean isDuplicate=false;
+		ArrayList<Member> memberList=this.readFile();
+		for (Member member : memberList) {
+			if(member.getId().equals(id)) {
+				isDuplicate=true;
+				break;
+			}
+		}
+		return isDuplicate;
+	}
+	
 	/*
 	 * readAll
 	 */
-	public ArrayList<Member> readAll() {
-		return null;
+	public ArrayList<Member> readAll() throws Exception {
+		return this.readFile();
 	}
+	
+	
 	/*
 	 * readOne
 	 */
-	public Member readOne() {
-		return null;
+	public Member readOne(String id) throws Exception {
+		Member findMember=null;
+		ArrayList<Member> memberList=this.readFile();
+		for (Member member : memberList) {
+			if(member.getId().equals(id)) {
+				findMember=member;
+				break;
+			}
+		}
+		
+		return findMember;
 	}
+	   
+	/**************update********************/
+	
 	public void update(Member updateMember) {
 		
 	}
+	
+	
+	
+	/**************delete********************/
+	
 	public void delete(String id) {
 		
 	}
