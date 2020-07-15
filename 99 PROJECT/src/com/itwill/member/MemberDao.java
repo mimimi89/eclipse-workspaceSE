@@ -93,7 +93,7 @@ public class MemberDao {
 	/**************update********************/
 	
 	public void update(Member updateMember) {
-		System.out.println("update1");
+		System.out.println("update1 ");
 		
 	}
 	
