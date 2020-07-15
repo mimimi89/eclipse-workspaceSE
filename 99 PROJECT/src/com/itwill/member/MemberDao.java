@@ -46,15 +46,13 @@ public class MemberDao {
 		if(isDuplicateId(addMember.getId())) {
 			isSuccess=false;
 			return isSuccess;
-			
 		}
 		isSuccess=true;
 		memberList.add(addMember);
 		this.writeFile(memberList);
 		return isSuccess;
 	}
-	
-	public boolean isDuplicateId(String id) throws Exception {
+	public boolean isDuplicateId(String id) throws Exception{
 		boolean isDuplicate=false;
 		ArrayList<Member> memberList=this.readFile();
 		for (Member member : memberList) {
@@ -64,20 +62,18 @@ public class MemberDao {
 			}
 		}
 		return isDuplicate;
+		
 	}
-	
 	/*
 	 * readAll
 	 */
-	public ArrayList<Member> readAll() throws Exception {
+	public ArrayList<Member> readAll()throws Exception {
 		return this.readFile();
 	}
-	
-	
 	/*
 	 * readOne
 	 */
-	public Member readOne(String id) throws Exception {
+	public Member readOne(String id) throws Exception{
 		Member findMember=null;
 		ArrayList<Member> memberList=this.readFile();
 		for (Member member : memberList) {
@@ -86,25 +82,47 @@ public class MemberDao {
 				break;
 			}
 		}
-		
 		return findMember;
 	}
-	   
-	/**************update********************/
-	
-	public void update(Member updateMember) {
-		System.out.println("update1 ");
-		
+	/*
+	 * update
+	 */
+	public void update(Member updateMember) throws Exception{
+		ArrayList<Member> memberList=this.readFile();
+		for (Member member : memberList) {
+			if(member.getId().equals(updateMember.getId())) {
+				member.setPassword(updateMember.getPassword());
+				member.setName(updateMember.getName());
+				member.setAddress(updateMember.getAddress());
+				member.setAge(updateMember.getAge());
+				member.setMarried(updateMember.isMarried());
+				break;
+			}
+		}
+		this.writeFile(memberList);
 	}
-	
-	
-	
-	/**************delete********************/
-	
-	public void delete(String id) {
+	/*
+	 * delete
+	 */
+	public void delete(String id) throws Exception {
+		ArrayList<Member> memberList=this.readFile();
+		for (Member member : memberList) {
+			if(member.getId().equals(id)) {
+				memberList.remove(member);
+				break;
+			}
+		}
+		this.writeFile(memberList);
 		
 	}
 }
+
+
+
+
+
+
+
 
 
 
