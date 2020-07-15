@@ -31,6 +31,7 @@ public class ArrayListMain {
 		}
 		System.out.println();
 		System.out.println("---------ArrayList[참조형]-----------");
+		
 		ArrayList accountList=new ArrayList(5);
 		System.out.println(accountList.toString());
 		System.out.println("#.size: "+accountList.size());
