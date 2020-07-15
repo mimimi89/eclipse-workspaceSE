@@ -1,4 +1,3 @@
-///
 import java.awt.Frame;
 import java.awt.List;
 import java.io.InputStream;
@@ -7,7 +6,7 @@ import java.net.Socket;
 import java.sql.Connection;
 
 import com.itwill.shop.ShopService;
-import com.itwill.shop.admin.Member;
+import com.itwill.shop.member.Member;
 import com.itwill.shop.order.Order;
 
 public class JavaPackageImportMain {
