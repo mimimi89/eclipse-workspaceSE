@@ -25,7 +25,7 @@ public class ObjectCloneTest {
 		private int radius;
 		
 		public Circle(int x, int y, int radius) {
-			point=new Point(x, y);
+			this.point=new Point(x, y);
 			this.radius=radius;
 		}
 		
