@@ -66,41 +66,29 @@ public class MemberService {
 	 * 회원리스트(회원여러명 주소로 찾기)
 	 * 회원리스트(회원여러명 나이로 찾기)
 	 */
-	public ArrayList<Member> memberList() throws Exception{
+	public ArrayList<Member> memberList()throws Exception{
 		return memberDao.readAll();
 	}
-	
-	
-	
 	/*
 	 * 회원탈퇴
 	 */
 	public void memberUnRegister(String id) throws Exception {
 		memberDao.delete(id);
-		
 	}
-	
-	
 	/*
 	 * 회원수정
 	 */
-	public void memberUpdate(Member updateMember) throws Exception {
+	public void memberUpdate(Member updateMember) throws Exception{
 		memberDao.update(updateMember);
 	}
-	
-	
-	
-	
+	/*
+	 * 아이디중복체크
+	 */
+	public boolean isDuplicateId(String id) throws Exception{
+		return memberDao.isDuplicateId(id);
+		
+	}
 }
-
-
-
-
-
-
-
-
-
 
 
 
