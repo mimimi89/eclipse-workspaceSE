@@ -43,6 +43,7 @@ import java.awt.event.ComponentEvent;
 public class MemberMainPanel extends JPanel {
 	/*******************/
 	MemberService memberService;
+	boolean isUpdate=false;
 	/*******************/
 	
 	
@@ -265,6 +266,17 @@ public class MemberMainPanel extends JPanel {
 		memberListP.add(deleteBtn);
 		
 		updateBtn = new JButton("수정");
+		updateBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					getMemberList();
+					updateMember();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		updateBtn.setEnabled(false);
 		updateBtn.setBounds(178, 342, 81, 23);
 		memberListP.add(updateBtn);
@@ -275,8 +287,51 @@ public class MemberMainPanel extends JPanel {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
 	}
 	
+	/************************************************/
+	protected void updateMember() {
+		try {
+			if(!isUpdate) {
+				// update
+				nameTF.setEditable(true);
+				addressTF.setEditable(true);
+				ageTF.setEditable(true);
+				marriedCHK.setEnabled(true);
+				nameTF.requestFocus();
+				isUpdate=true;
+				updateBtn.setText("수정완료");
+			}else {
+				String id=idTF.getText();
+				String name=nameTF.getText();
+				String address=addressTF.getText();
+				String ageStr=ageTF.getText();
+				boolean married=marriedCHK.isSelected();
+				memberService.memberUpdate(
+						new Member(id, 
+								id, 
+								name, 
+								address, 
+								Integer.parseInt(ageStr), 
+								married));
+				
+				// edit가능
+				nameTF.setEditable(false);
+				addressTF.setEditable(false);
+				ageTF.setEditable(false);
+				marriedCHK.setEnabled(false);
+				nameTF.requestFocus();
+				isUpdate=false;
+				updateBtn.setText("수정");
+				
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+		
+	}
 	protected void deleteMember() {
 		try {
 			String deleteId = idTF.getText();
