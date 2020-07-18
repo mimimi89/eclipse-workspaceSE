@@ -70,7 +70,6 @@ public class MemberDao {
 		if(isDuplicateId(addMember.getId())) {
 			//추가한 멤버의 아이디를 인자로 넣어 중복여부 체크
 			isSuccess=false;
-			//false를 
 			return isSuccess;
 		}
 		isSuccess=true;
@@ -78,6 +77,7 @@ public class MemberDao {
 		this.writeFile(memberList);
 		return isSuccess;
 	}
+	
 	public boolean isDuplicateId(String id) throws Exception{
 		boolean isDuplicate=false;
 		ArrayList<Member> memberList=this.readFile();
@@ -90,12 +90,14 @@ public class MemberDao {
 		return isDuplicate;
 		
 	}
+	
 	/*
 	 * readAll
 	 */
 	public ArrayList<Member> readAll()throws Exception {
 		return this.readFile();
 	}
+	
 	/*
 	 * readOne
 	 */
@@ -110,6 +112,7 @@ public class MemberDao {
 		}
 		return findMember;
 	}
+	
 	/*
 	 * update
 	 */
@@ -127,6 +130,7 @@ public class MemberDao {
 		}
 		this.writeFile(memberList);
 	}
+	
 	/*
 	 * delete
 	 */

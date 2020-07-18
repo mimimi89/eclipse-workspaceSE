@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MemberService {
 	private MemberDao memberDao;
+	
 	public MemberService() throws Exception{
 		memberDao=new MemberDao();
 	}
