@@ -1,4 +1,4 @@
-package jiaokeshu_7_배열과ArrayList_array;
+package jiaokeshu_07_배열과ArrayList_array;
 
 public class ArrayTest {
 
