@@ -1,16 +1,28 @@
 package jiaokeshu_12_컬렉션프레임워크_제네릭;
 
-public class ThreeDPrinter {
+public class ThreeDPrinter<T extends Material> {
 	
-	private Object material;
+	private T material;
 
-	public Object getMaterial() {
+	public T getMaterial() {
 		return material;
 	}
 
-	public void setMaterial(Object material) {
+	public void setMaterial(T material) {
 		this.material = material;
+		material.doPrinting();
 	}
+
+	@Override
+	public String toString() {
+		return material.toString();
+	}
+	
+	public void printing() {
+		material.doPrinting();
+	}
+	
+	
 	
 	
 
