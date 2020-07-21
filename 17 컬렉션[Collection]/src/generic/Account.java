@@ -8,11 +8,9 @@ public class Account implements Comparable<Account>{
 	private String owner;	//계좌주
 	private int balance;	//잔고
 	private double iyul;	//이율
+	
 	/*
 	 * 생성자
-	 */
-	/**
-	 * 빈계좌객체생성
 	 */
 	public Account() {
 	}
@@ -33,9 +31,7 @@ public class Account implements Comparable<Account>{
 		this.setAccountData(no, owner, balance, iyul);
 	}
 	
-	/*
-	 * 멤버메쏘드
-	 */
+
 	/*
 	 * 입금
 	 */

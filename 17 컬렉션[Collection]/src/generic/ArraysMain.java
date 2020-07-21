@@ -29,10 +29,27 @@ public class ArraysMain {
 		isSame=Arrays.equals(strArray1, strArray2);
 		System.out.println(">>>"+isSame);
 		
+		
 		System.out.println("2. 배열의 원소 채우기");
 		int[] intArray3=new int[10];
 		Arrays.fill(intArray3,99);
 		System.out.println(intArray3);
+		System.out.println("////////////////////////");
+		
+		/*
+		 * a1, a2 두 개의 배열을 비교해서 boolean으로 결과를 반환하는 메쏘드
+		 * Arrays.equals(a1, a2);
+		 * 
+		 * a 배열에 val을 채워넣는 메쏘드
+		 * Arrays.fill(a, val);
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		
+		
 		for (int tempi : intArray3) {
 			System.out.print(tempi+", ");
 		}
