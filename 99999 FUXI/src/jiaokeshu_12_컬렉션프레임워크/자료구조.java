@@ -42,12 +42,14 @@ public class 자료구조 {
 	 * 부모 노드 오른쪽의 자식 노드 값은 부모 노드의 값보다 커야 함.
 	 * 균형 있는 tree여야 검색 속도가 빠름
 	 * bst in-order travesal 하게 되면 오름차순으로 정렬
-	 * 
-	 * 
-	 * 
 	 */
 	
-	
+	/*
+	 * Hashing(해싱): 산술연산을 통한 검색을 위한 자료구조
+	 * hash table/key value/hash function/index
+	 * index=h(key)
+	 * 
+	 */
 	
 	
 
