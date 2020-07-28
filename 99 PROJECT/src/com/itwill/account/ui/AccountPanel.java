@@ -51,13 +51,6 @@ public class AccountPanel extends JPanel {
 		JPanel panel = new JPanel();
 		add(panel, BorderLayout.SOUTH);
 		
-		JButton btnNewButton = new JButton("계좌추가");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				accountTP.setSelectedIndex(0);
-			}
-		});
-		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("계좌리스트");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -137,6 +130,10 @@ public class AccountPanel extends JPanel {
 		addP.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("취소");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_5.setBounds(195, 205, 97, 23);
 		addP.add(btnNewButton_5);
 		
