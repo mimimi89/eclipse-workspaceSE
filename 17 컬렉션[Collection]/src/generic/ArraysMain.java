@@ -34,6 +34,7 @@ public class ArraysMain {
 		int[] intArray3=new int[10];
 		Arrays.fill(intArray3,99);
 		System.out.println(intArray3);
+		//[I@15db9742 : 주소가 출력됨
 		System.out.println("////////////////////////");
 		
 		/*
@@ -41,14 +42,8 @@ public class ArraysMain {
 		 * Arrays.equals(a1, a2);
 		 * 
 		 * a 배열에 val을 채워넣는 메쏘드
-		 * Arrays.fill(a, val);
-		 * 
-		 * 
-		 * 
+		 * Arrays.fill(a, val); 
 		 */
-		
-		
-		
 		
 		for (int tempi : intArray3) {
 			System.out.print(tempi+", ");
