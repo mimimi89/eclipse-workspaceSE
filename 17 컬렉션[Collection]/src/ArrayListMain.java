@@ -37,6 +37,7 @@ public class ArrayListMain {
 		System.out.println("#.size: "+accountList.size());
 		
 		System.out.println();
+		
 		System.out.println("********** 1. add ***********");
 		accountList.add(acc1);
 		accountList.add(acc2);
