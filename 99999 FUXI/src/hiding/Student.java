@@ -1,0 +1,17 @@
+package hiding;
+//정보은닉
+
+public class Student {
+	int studentID;
+	private String studentName;
+	int grade;
+	String address;
+	
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName=studentName;
+	}
+}
